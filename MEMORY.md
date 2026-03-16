@@ -14,3 +14,4 @@
 ## Active Systems
 - **Auto-Scout Loop**: Configured via `HEARTBEAT.md` to run every 24 hours. Scouts new DePIN projects using `web_search`, notifies via Telegram, and automatically writes guides/deploys to Vercel upon approval.
 - **Video Generator**: Remotion skill is installed and configured for programmatic motion graphics (`skills_log.md`), though currently not displaying correctly on the main `depin-hub` page.
+- **Jordan Homepage**: Built and deployed a CiferTech-inspired cyberpunk/minimalist homepage at jordan-homepage-sigma.vercel.app, linking back to the DePIN Hub.
