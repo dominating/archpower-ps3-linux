@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PassivePin | DePIN &amp; Airdrop Hub</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .bg-card { background: #161b22; border: 1px solid #30363d; display: flex; flex-direction: column; }
+        .text-glow { text-shadow: 0 0 10px rgba(88, 166, 255, 0.5); }
+        .gradient-text {
+            background: linear-gradient(90deg, #58a6ff, #3fb950, #8957e5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .badge {
+            background: #238636;
+            color: white;
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .badge-android { background: #3ddc84; color: #000; }
+        .badge-linux { background: #f5a90f; color: #000; }
+        .badge-windows { background: #00a4ef; color: #fff; }
+        .badge-browser { background: #8957e5; color: #fff; }
+        .badge-device { background: #d29922; color: #fff; }
+        
+        .card-content { flex-grow: 1; }
+        .btn-visit { background: transparent; color: #58a6ff; border: 1px solid #58a6ff; }
+        .btn-visit:hover { background: #58a6ff; color: #000; }
+        .btn-visit-hw { background: transparent; color: #8957e5; border: 1px solid #8957e5; }
+        .btn-visit-hw:hover { background: #8957e5; color: #fff; }
+        .btn-visit-dp { background: transparent; color: #d29922; border: 1px solid #d29922; }
+        .btn-visit-dp:hover { background: #d29922; color: #000; }
+        
+        .project-logo {
+            width: 40px; height: 40px; border-radius: 8px; background: #fff; padding: 2px;
+            object-fit: contain; flex-shrink: 0;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-blue-500 selection:text-white">
+<header class="w-full border-b border-[#30363d] bg-[#0d1117] sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<a class="flex items-center group" href="/">
+<svg class="w-8 h-8 mr-2 drop-shadow-[0_0_8px_rgba(88,166,255,0.6)]" fill="none" stroke="url(#pin-gradient)" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="pin-gradient" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#58a6ff"></stop>
+<stop offset="50%" stop-color="#3fb950"></stop>
+<stop offset="100%" stop-color="#8957e5"></stop>
+</lineargradient>
+</defs>
+<circle cx="12" cy="10" r="3" stroke-width="2"></circle>
+<line stroke-width="2" x1="12" x2="16" y1="10" y2="6"></line>
+<line stroke-width="2" x1="12" x2="8" y1="10" y2="6"></line>
+<circle cx="16" cy="6" fill="currentColor" r="1.5" stroke="none"></circle>
+<circle cx="8" cy="6" fill="currentColor" r="1.5" stroke="none"></circle>
+<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<h1 class="text-2xl font-bold gradient-text text-glow tracking-wide">PassivePin</h1>
+</a>
+<nav class="hidden md:flex space-x-6 text-sm font-medium">
+<a class="hover:text-[#58a6ff] transition" href="#free">Zero Investment Nodes</a>
+<a class="hover:text-[#8957e5] transition" href="#devices">Airdrop Hardware</a>
+<a class="hover:text-[#58a6ff] transition" href="#paid">DePIN Hardware</a>
+<a class="hover:text-[#0ea5e9] transition" href="#bandwidth">Fiat Bandwidth</a>
+<a class="hover:text-[#f87171] transition" href="#trading">Trading &amp; Staking</a></nav>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 py-12">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-white">Turn Resources into <span class="gradient-text">Crypto Rewards</span></h2>
+<p class="text-lg text-gray-400 max-w-2xl mx-auto">Discover the top active and brand-new Decentralized Physical Infrastructure Networks (DePIN), node extensions, and Web3 hardware yielding passive crypto.</p>
+<div class="mt-6 inline-flex items-center bg-[#238636]/10 border border-[#238636] text-[#7ee787] text-sm px-4 py-2 rounded-full">
+<span class="mr-2 animate-pulse">🟢</span> Auto-updating every 24hrs (Tracking latest alpha &amp; new nodes)
+            </div>
+</div>
+
+<!-- Featured Guide -->
+<section class="mb-20 bg-[#161b22] border border-[#58a6ff] rounded-2xl p-8 relative overflow-hidden shadow-[0_0_20px_rgba(88,166,255,0.1)]">
+    <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-[#58a6ff]/10 rounded-full blur-3xl z-0"></div>
+    <div class="relative z-10 flex flex-col md:flex-row gap-8 items-center">
+        <div class="w-full md:w-2/3 mx-auto">
+            <h3 class="text-3xl font-extrabold text-white mb-4"><span class="gradient-text">Featured Guide:</span> DuinoCoin ESP32-S2 USB Miner</h3>
+            <p class="text-gray-300 mb-6 leading-relaxed">Turn your ESP32-S2 USB Dongle into a dedicated <a href="https://duinocoin.com/" class="text-[#58a6ff] hover:underline" target="_blank">DuinoCoin (DUCO)</a> miner! We've compiled a lightweight, headless (no-monitor) firmware that drops right onto your device for silent, passive hashing.</p>
+            
+            <div class="bg-[#0d1117] rounded-xl p-5 border border-[#30363d] mb-6">
+                <h4 class="text-white font-bold mb-3 flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-[#3fb950]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    Quick Start
+                </h4>
+                <ol class="list-decimal list-inside text-sm text-gray-400 space-y-3">
+                    <li><a href="/firmware/s2/duco/merged.bin" class="text-[#58a6ff] hover:underline font-mono bg-[#58a6ff]/10 px-1 rounded">Download merged.bin</a></li>
+                    <li>Plug your ESP32-S2 USB Dongle into your computer.</li>
+                    <li>Flash the firmware using <code class="text-[#f5a90f] bg-[#f5a90f]/10 px-1 rounded">esptool.py</code> to offset <code class="text-white">0x0</code>:
+                        <div class="mt-2 bg-black p-3 rounded-lg border border-[#30363d] overflow-x-auto text-xs text-green-400 font-mono">
+                            esptool.py -p /dev/ttyACM0 -b 460800 write_flash 0x0 merged.bin
+                        </div>
+                    </li>
+                    <li class="pt-1 italic">Note: Replace <code class="text-white">/dev/ttyACM0</code> with your COM port on Windows (e.g., <code class="text-white">COM3</code>).</li>
+                </ol>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span class="badge badge-device text-xs px-3 py-1">ESP32-S2</span>
+                <span class="badge badge-windows text-xs px-3 py-1">Headless</span>
+            </div>
+        </div>
+        
+        
+    </div>
+</section>
+
+<!-- Section 1: Free / Zero Investment -->
+<section class="mb-20" id="free">
+<div class="flex items-center mb-8">
+<div class="w-2 h-8 bg-[#3fb950] rounded mr-4"></div>
+<h3 class="text-3xl font-bold text-white">Zero Investment (Upcoming &amp; Active Nodes)</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Grass -->
+<div class="bg-card p-6 rounded-xl hover:border-[#3fb950] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="Grass Logo" class="project-logo mr-3" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=getgrass.io&amp;sz=128';" src="https://logo.clearbit.com/getgrass.io"/>
+<h4 class="text-xl font-bold text-white">Grass</h4>
+</div>
+<span class="badge badge-browser mt-1">Extension</span>
+</div>
+<p class="text-sm text-gray-400 mb-4">Share your unused internet bandwidth to train AI models. One of the most established passive income extensions in the space.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-windows">Windows</span><span class="badge badge-linux">Linux</span>
+</div>
+<p class="text-xs text-[#58a6ff] mb-4">Yield: Points -&gt; Airdrop/Tokens</p>
+</div>
+<a class="block text-center bg-[#3fb950] text-black font-bold py-2 rounded-md hover:bg-[#2ea043] transition" href="https://app.grass.io/register?referralCode=VMktu1lIKWxeMu7" target="_blank">Join Grass</a>
+</div>
+
+<!-- DataHive AI -->
+<div class="bg-card p-6 rounded-xl hover:border-[#3fb950] transition duration-300">
+    <div class="card-content">
+        <div class="flex justify-between items-start mb-4">
+            <div class="flex items-center">
+                <img alt="DataHive AI Logo" class="project-logo mr-3" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=datahive.ai&sz=128';" src="https://logo.clearbit.com/datahive.ai"/>
+                <h4 class="text-xl font-bold text-white">DataHive AI</h4>
+            </div>
+            <span class="badge badge-browser mt-1">Extension</span>
+        </div>
+        <p class="text-sm text-gray-400 mb-4">Share your unused internet bandwidth to train AI models. A fast-growing DePIN project comparable to Grass with high airdrop potential.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+            <span class="badge badge-windows">Windows</span><span class="badge badge-linux">Linux</span><span class="badge badge-browser">Browser</span>
+        </div>
+        <p class="text-xs text-[#58a6ff] mb-4">Yield: Points -> $DATA Tokens</p>
+    </div>
+    <div class="mt-4 flex gap-2">
+        <a class="flex-1 text-center text-sm font-bold py-2 rounded-md transition hover:opacity-80 bg-[#3fb950] text-black" href="/guides/datahive-ai-guide.md" target="_blank">Read Guide</a>
+    </div>
+</div>
+
+<!-- YOM Network -->
+<div class="bg-card p-6 rounded-xl hover:border-[#3fb950] transition duration-300">
+    <div class="card-content">
+        <div class="flex justify-between items-start mb-4">
+            <div class="flex items-center">
+                <img alt="YOM Logo" class="project-logo mr-3" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=yom.xyz&sz=128';" src="https://logo.clearbit.com/yom.xyz"/>
+                <h4 class="text-xl font-bold text-white">YOM Network</h4>
+            </div>
+            <span class="badge badge-device mt-1">Node</span>
+        </div>
+        <p class="text-sm text-gray-400 mb-4">Decentralized cloud gaming nodes. Provide low-latency game streaming for web3 games using your idle GPU and earn passive income.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+            <span class="badge badge-windows">Windows</span><span class="badge badge-linux">Linux</span>
+        </div>
+        <p class="text-xs text-[#58a6ff] mb-4">Yield: $YOM Tokens</p>
+    </div>
+    <div class="mt-4 flex gap-2">
+        <a class="flex-1 text-center text-sm font-bold py-2 rounded-md transition hover:opacity-80 bg-[#3fb950] text-black" href="/guides/yom-node-guide.md" target="_blank">Read Guide</a>
+    </div>
+</div>
+<!-- Gradient Network -->
+<div class="bg-card p-6 rounded-xl hover:border-[#58a6ff] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="Gradient Logo" class="project-logo mr-3" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=gradient.network&amp;sz=128';" src="https://logo.clearbit.com/gradient.network"/>
+<h4 class="text-xl font-bold text-white">Gradient</h4>
+</div>
+<span class="badge badge-browser mt-1">Extension</span>
+</div>
+<p class="text-sm text-gray-400 mb-4">A decentralized computing layer for Web3. Run the lightweight node extension in the background to earn proof-of-uptime rewards.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-windows">Windows</span><span class="badge badge-linux">Linux</span>
+</div>
+<p class="text-xs text-[#58a6ff] mb-4">Yield: Network Tokens</p>
+</div>
+<a class="block text-center btn-visit font-bold py-2 rounded-md transition mb-2" href="https://gradient.network/" target="_blank">Visit Website</a>
+<p class="text-sm font-bold text-white bg-[#0d1117] border border-[#30363d] p-2 rounded text-center">Ref Code: <span class="text-[#3fb950]">A20MON</span></p>
+</div>
+<!-- BlockMesh -->
+<div class="bg-card p-6 rounded-xl hover:border-[#3fb950] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="BlockMesh Logo" class="project-logo mr-3" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=blockmesh.xyz&amp;sz=128';" src="https://logo.clearbit.com/blockmesh.xyz"/>
+<div>
+<h4 class="text-xl font-bold text-white leading-tight">BlockMesh</h4>
+<span class="text-yellow-400 text-[10px] uppercase font-bold">HOT Airdrop</span>
+</div>
+</div>
+<span class="badge badge-browser mt-1">Extension</span>
+</div>
+<p class="text-sm text-gray-400 mb-4">Brand new bandwidth and data scraping network. Very early stage with massive airdrop farming potential right now.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-windows">Windows</span><span class="badge badge-linux">Linux</span><span class="badge badge-android">Android</span>
+</div>
+<p class="text-xs text-[#58a6ff] mb-4">Yield: Early Adopter Points</p>
+</div>
+<a class="block text-center bg-[#3fb950] text-black font-bold py-2 rounded-md hover:bg-[#2ea043] transition" href="https://backend.perceptrons.xyz/register?invite_code=5e3c9953-4eca-446f-ad36-401a01cff978" target="_blank">Join Perceptrons</a>
+</div>
+<!-- Dawn -->
+<div class="bg-card p-6 rounded-xl hover:border-[#58a6ff] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="Dawn Logo" class="project-logo mr-3" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=dawninternet.com&amp;sz=128';" src="https://logo.clearbit.com/dawninternet.com"/>
+<h4 class="text-xl font-bold text-white">Dawn</h4>
+</div>
+<span class="badge badge-browser mt-1">Extension</span>
+</div>
+<p class="text-sm text-gray-400 mb-4">Decentralized Autonomous Wireless Networks. Validate connection speeds and uptime to earn rewards passively.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-windows">Windows</span><span class="badge badge-linux">Linux</span>
+</div>
+<p class="text-xs text-[#58a6ff] mb-4">Yield: DAWN Tokens</p>
+</div>
+<a class="block text-center bg-[#3fb950] text-black font-bold py-2 rounded-md hover:bg-[#2ea043] transition mb-2" href="https://chromewebstore.google.com/detail/dawn-validator-chrome-ext/fpdkjdnhkakefebpekbdhillbhonfjjp" target="_blank">Install Extension</a>
+<p class="text-sm font-bold text-white bg-[#0d1117] border border-[#30363d] p-2 rounded text-center">Ref Code: <span class="text-[#3fb950]">0FV8JWOS</span></p>
+</div>
+<!-- Nodepay -->
+<div class="bg-card p-6 rounded-xl hover:border-[#3fb950] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="Nodepay Logo" class="project-logo mr-3" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=nodepay.ai&amp;sz=128';" src="https://logo.clearbit.com/nodepay.ai"/>
+<h4 class="text-xl font-bold text-white">Nodepay</h4>
+</div>
+<span class="badge badge-browser mt-1">Extension</span>
+</div>
+<p class="text-sm text-gray-400 mb-4">Bandwidth marketplace specifically focused on decentralized AI training. Very low overhead and runs silently.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-windows">Windows</span><span class="badge badge-linux">Linux</span>
+</div>
+<p class="text-xs text-[#58a6ff] mb-4">Yield: Points System</p>
+</div>
+<a class="block text-center bg-[#3fb950] text-black font-bold py-2 rounded-md hover:bg-[#2ea043] transition" href="https://nodepay.ai/ref/yg69z27mnmep9qj" target="_blank">Join Nodepay</a>
+</div>
+<!-- UpRock -->
+<div class="bg-card p-6 rounded-xl hover:border-[#3fb950] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="UpRock Logo" class="project-logo mr-3" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=uprock.com&amp;sz=128';" src="https://logo.clearbit.com/uprock.com"/>
+<h4 class="text-xl font-bold text-white">UpRock</h4>
+</div>
+<span class="badge badge-browser mt-1" style="background: #3fb950">App / Node</span>
+</div>
+<p class="text-sm text-gray-400 mb-4">Share your idle internet bandwidth to power AI web scraping. Strong ecosystem on Solana.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-windows">Windows</span><span class="badge badge-linux">Linux</span><span class="badge badge-android">Android</span>
+</div>
+<p class="text-xs text-[#58a6ff] mb-4">Yield: UPT Tokens</p>
+</div>
+<a class="block text-center bg-[#3fb950] text-black font-bold py-2 rounded-md hover:bg-[#2ea043] transition mt-auto" href="https://link.uprock.com/i/9be66bbc" target="_blank">Join UpRock</a>
+</div>
+<!-- Koii Network -->
+<div class="bg-card p-6 rounded-xl hover:border-[#3fb950] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="Koii Logo" class="project-logo mr-3 bg-white" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=koii.network&amp;sz=128';" src="https://logo.clearbit.com/koii.network"/>
+<h4 class="text-xl font-bold text-white">Koii Network</h4>
+</div>
+<span class="badge badge-browser mt-1" style="background: #3fb950">Desktop Node</span>
+</div>
+<p class="text-sm text-gray-400 mb-4">Run a desktop node to provide compute for AI models, decentralized scraping, and more. Highly active community.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-windows">Windows</span><span class="badge badge-linux">Linux</span>
+</div>
+<p class="text-xs text-[#58a6ff] mb-4">Yield: KOII Tokens</p>
+</div>
+<a class="block text-center btn-visit font-bold py-2 rounded-md transition mt-auto" href="https://koii.network/" target="_blank">Visit Website</a>
+</div>
+<!-- Natix Network -->
+<div class="bg-card p-6 rounded-xl hover:border-[#3fb950] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="Natix Logo" class="project-logo mr-3 bg-white" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=natix.network&amp;sz=128';" src="https://logo.clearbit.com/natix.network"/>
+<h4 class="text-xl font-bold text-white">NATIX</h4>
+</div>
+<span class="badge badge-browser mt-1" style="background: #3fb950">App</span>
+</div>
+<p class="text-sm text-gray-400 mb-4">Turn your smartphone into a decentralized dashcam. Earn tokens by mapping the streets while you drive—no custom hardware needed.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-android">Android</span>
+</div>
+<p class="text-xs text-[#58a6ff] mb-4">Yield: NATIX Tokens</p>
+</div>
+<a class="block text-center btn-visit font-bold py-2 rounded-md transition mt-auto" href="https://www.natix.network/" target="_blank">Visit Website</a>
+</div>
+<!-- Oasis AI -->
+<div class="bg-card p-6 rounded-xl hover:border-[#3fb950] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="Oasis AI Logo" class="project-logo mr-3" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=oasis.ai&amp;sz=128';" src="https://logo.clearbit.com/oasis.ai"/>
+<h4 class="text-xl font-bold text-white">Oasis AI</h4>
+</div>
+<span class="badge badge-browser mt-1">Extension</span>
+</div>
+<p class="text-sm text-gray-400 mb-4">Connect your GPU/CPU or just bandwidth to the decentralized AI compute network via a simple browser extension.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-windows">Windows</span><span class="badge badge-linux">Linux</span>
+</div>
+<p class="text-xs text-[#58a6ff] mb-4">Yield: OAI Tokens</p>
+</div>
+<a class="block text-center bg-[#3fb950] text-black font-bold py-2 rounded-md hover:bg-[#2ea043] transition" href="https://oasis.ai/" target="_blank">Join Oasis AI</a>
+</div>
+<!-- UpRock -->
+<!-- Koii Network -->
+<div class="bg-card p-6 rounded-xl hover:border-[#3fb950] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="Acurast Logo" class="project-logo mr-3 bg-white" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=acurast.com&amp;sz=128';" src="https://logo.clearbit.com/acurast.com"/>
+<h4 class="text-xl font-bold text-white">Acurast</h4>
+</div>
+<span class="badge badge-android mt-1">Mobile App</span>
+</div>
+<p class="text-sm text-gray-400 mb-4">Turn your spare mobile device into a decentralized server. Mine and earn rewards by providing compute power via the Acurast app.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-android">Android</span>
+</div>
+<p class="text-xs text-[#58a6ff] mb-4">Yield: cACU Tokens</p>
+</div>
+<a class="block text-center bg-[#3fb950] text-black font-bold py-2 rounded-md hover:bg-[#2ea043] transition" href="https://acurast.com/" target="_blank">Visit Website</a>
+</div><div class="bg-card p-6 rounded-xl hover:border-[#3fb950] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="BlockGames Logo" class="project-logo mr-3 bg-white" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=blockgames.app&amp;sz=128';" src="https://logo.clearbit.com/blockgames.app"/>
+<h4 class="text-xl font-bold text-white">BlockGames</h4>
+</div>
+<span class="badge badge-android mt-1">App</span>
+</div>
+<p class="text-sm text-gray-400 mb-4">A cross-chain, universal player network. Play mobile games, build your player profile, and earn rewards and ecosystem airdrops.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-android">Android</span><span class="badge badge-browser">Browser</span>
+</div>
+<p class="text-xs text-[#58a6ff] mb-4">Yield: BLOCK / Points</p>
+</div>
+<a class="block text-center bg-[#3fb950] text-black font-bold py-2 rounded-md hover:bg-[#2ea043] transition mt-auto" href="https://blockgames.app?referral_code=Micemeat" target="_blank">Join BlockGames</a>
+</div><div class="bg-card p-6 rounded-xl hover:border-[#3fb950] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="Farcaster Logo" class="project-logo mr-3 bg-white" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=farcaster.xyz&amp;sz=128';" src="https://logo.clearbit.com/farcaster.xyz"/>
+<h4 class="text-xl font-bold text-white">Farcaster</h4>
+</div>
+<span class="badge badge-android mt-1">Social</span>
+</div>
+<p class="text-sm text-gray-400 mb-4">A sufficiently decentralized social network (Warpcast app). Highly active community with frequent ecosystem airdrops for active users.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-android">Android</span><span class="badge badge-browser">Web</span>
+</div>
+<p class="text-xs text-[#58a6ff] mb-4">Yield: Ecosystem Airdrops</p>
+</div>
+<a class="block text-center bg-[#3fb950] text-black font-bold py-2 rounded-md hover:bg-[#2ea043] transition mt-auto" href="https://farcaster.xyz/~/code/6LBJ0D" target="_blank">Join Farcaster</a>
+</div><div class="bg-card p-6 rounded-xl hover:border-[#3fb950] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="Zerion Logo" class="project-logo mr-3 bg-white" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=zerion.io&amp;sz=128';" src="https://logo.clearbit.com/zerion.io"/>
+<h4 class="text-xl font-bold text-white">Zerion Wallet</h4>
+</div>
+<span class="badge badge-android mt-1">Wallet</span>
+</div>
+<p class="text-sm text-gray-400 mb-4">Smart Web3 wallet and portfolio tracker. Trade across networks, track your positions, and earn rewards and perks.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-android">Android</span><span class="badge badge-browser">Extension</span>
+</div>
+<p class="text-xs text-[#58a6ff] mb-4">Yield: Wallet Perks</p>
+</div>
+<a class="block text-center bg-[#3fb950] text-black font-bold py-2 rounded-md hover:bg-[#2ea043] transition mt-auto" href="https://link.zerion.io/referral?code=BAGXB8864" target="_blank">Get Zerion</a>
+</div><div class="bg-card p-6 rounded-xl hover:border-[#3fb950] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="375go Logo" class="project-logo mr-3 bg-white" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=375.ai&amp;sz=128';" src="https://logo.clearbit.com/375.ai"/>
+<h4 class="text-xl font-bold text-white">375go</h4>
+</div>
+<span class="badge badge-android mt-1">App</span>
+</div>
+<p class="text-sm text-gray-400 mb-4">Mobile data collection app building an advanced decentralized edge network. Run in background to earn.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-android">Android</span><span class="badge badge-windows">iOS</span>
+</div>
+<p class="text-xs text-[#58a6ff] mb-4">Yield: 375 Tokens</p>
+</div>
+<a class="block text-center bg-[#3fb950] text-black font-bold py-2 rounded-md hover:bg-[#2ea043] transition" href="https://app.375.ai/auth?invitation_code=ima9aCtaKd32qhWyv6nkCt" target="_blank">Join 375go</a>
+</div><div class="bg-card p-6 rounded-xl hover:border-[#3fb950] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="Billions Logo" class="project-logo mr-3 bg-white" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=official.app&amp;sz=128';" src="https://logo.clearbit.com/official.app"/>
+<h4 class="text-xl font-bold text-white leading-tight">Billions<br/><span class="text-sm font-normal text-gray-400">Network</span></h4>
+</div>
+<span class="badge badge-browser mt-1">App</span>
+</div>
+<p class="text-sm text-gray-400 mb-4">Social and networking application offering rewards for participation and ecosystem growth.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-windows">Web</span><span class="badge badge-android">Mobile</span>
+</div>
+<p class="text-xs text-[#58a6ff] mb-4">Yield: Ecosystem Rewards</p>
+</div>
+<a class="block text-center bg-[#3fb950] text-black font-bold py-2 rounded-md hover:bg-[#2ea043] transition" href="https://official.app/rc/5UWKOYQE6Z" target="_blank">Join Billions</a>
+</div><div class="bg-card p-6 rounded-xl hover:border-[#3fb950] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="Spur Protocol Logo" class="project-logo mr-3 bg-white" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=spurprotocol.com&amp;sz=128';" src="https://logo.clearbit.com/spurprotocol.com"/>
+<h4 class="text-xl font-bold text-white leading-tight">Spur Protocol</h4>
+</div>
+<span class="badge badge-browser mt-1">Node</span>
+</div>
+<p class="text-sm text-gray-400 mb-4">Decentralized network incentivizing users to share idle resources. Run nodes to earn passive income.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-windows">Windows</span><span class="badge badge-linux">Linux</span>
+</div>
+<p class="text-xs text-[#58a6ff] mb-4">Yield: Points</p>
+</div>
+<a class="block text-center bg-[#3fb950] text-black font-bold py-2 rounded-md hover:bg-[#2ea043] transition" href="https://spurprotocol.com/s/8PB5EpXxp" target="_blank">Join Spur Protocol</a>
+</div><div class="bg-card p-6 rounded-xl hover:border-[#3fb950] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="Hyra Logo" class="project-logo mr-3 bg-white" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=hyra.network&amp;sz=128';" src="https://logo.clearbit.com/hyra.network"/>
+<h4 class="text-xl font-bold text-white leading-tight">Hyra</h4>
+</div>
+<span class="badge badge-browser mt-1">Extension</span>
+</div>
+<p class="text-sm text-gray-400 mb-4">Provide bandwidth and computing power. Lightweight background node earning network points.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-windows">Windows</span><span class="badge badge-linux">Linux</span>
+</div>
+<p class="text-xs text-[#58a6ff] mb-4">Yield: Hyra Points</p>
+</div>
+<p class="text-sm font-bold text-white bg-[#0d1117] border border-[#30363d] p-2 rounded text-center">Ref Code: <span class="text-[#3fb950]">28daf5a19e432</span></p>
+</div><div class="bg-card p-6 rounded-xl hover:border-[#3fb950] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="Based Logo" class="project-logo mr-3 bg-white" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=based.one&amp;sz=128';" src="https://logo.clearbit.com/based.one"/>
+<h4 class="text-xl font-bold text-white leading-tight">Based</h4>
+</div>
+<span class="badge badge-browser mt-1">App</span>
+</div>
+<p class="text-sm text-gray-400 mb-4">Decentralized application built on Base layer 2. Earn points and future airdrops via ecosystem engagement.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-windows">Web</span><span class="badge badge-android">Mobile</span>
+</div>
+<p class="text-xs text-[#58a6ff] mb-4">Yield: Based Points</p>
+</div>
+<a class="block text-center bg-[#3fb950] text-black font-bold py-2 rounded-md hover:bg-[#2ea043] transition" href="https://based.one/r/MICE" target="_blank">Join Based</a>
+</div><div class="bg-card p-6 rounded-xl hover:border-[#3fb950] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="Urnetwork Logo" class="project-logo mr-3 bg-white" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=ur.io&amp;sz=128';" src="https://logo.clearbit.com/ur.io"/>
+<h4 class="text-xl font-bold text-white leading-tight">Urnetwork</h4>
+</div>
+<span class="badge badge-browser mt-1">Extension</span>
+</div>
+<p class="text-sm text-gray-400 mb-4">A decentralized AI infrastructure network. Share your bandwidth and computing power to earn daily rewards.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-windows">Windows</span><span class="badge badge-linux">Linux</span>
+</div>
+<p class="text-xs text-[#58a6ff] mb-4">Yield: Points</p>
+</div>
+<a class="block text-center bg-[#3fb950] text-black font-bold py-2 rounded-md hover:bg-[#2ea043] transition mt-auto" href="https://ur.io/c?bonus=D39LIW" target="_blank">Join Urnetwork</a>
+</div><div class="bg-card p-6 rounded-xl hover:border-[#3fb950] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="Teneo Logo" class="project-logo mr-3 bg-white" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=teneo.pro&amp;sz=128';" src="https://logo.clearbit.com/teneo.pro"/>
+<h4 class="text-xl font-bold text-white leading-tight">Teneo</h4>
+</div>
+<span class="badge badge-browser mt-1">Extension</span>
+</div>
+<p class="text-sm text-gray-400 mb-4">Earn rewards by running a community node and sharing your unused bandwidth.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-windows">Windows</span><span class="badge badge-linux">Linux</span>
+</div>
+<p class="text-xs text-[#58a6ff] mb-4">Yield: Teneo Points</p>
+</div>
+<div class="flex flex-col gap-2 mt-auto">
+<a class="block text-center bg-[#3fb950] text-black font-bold py-2 rounded-md hover:bg-[#2ea043] transition" href="https://dashboard.teneo.pro/auth/signup?referralCode=jX9Hu" target="_blank">Join Teneo</a>
+</div>
+</div></div></section>
+<!-- Section 2: Web3 Devices & Airdrops -->
+<!-- Section: Trading & Staking -->
+<section class="mb-20" id="trading">
+<div class="flex items-center mb-8">
+<div class="w-2 h-8 bg-[#f87171] rounded mr-4"></div>
+<h3 class="text-3xl font-bold text-white">Trading &amp; Staking (Investment Required)</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Dreamcash -->
+<div class="bg-card p-6 rounded-xl hover:border-[#f87171] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="Dreamcash Logo" class="project-logo mr-3 bg-white" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=dreamcash.com&amp;sz=128';" src="https://logo.clearbit.com/dreamcash.com"/>
+<h4 class="text-xl font-bold text-white">Dreamcash</h4>
+</div>
+<span class="badge mt-1" style="background:#f87171">Trading</span>
+</div>
+<p class="text-sm text-gray-400 mb-4">Advanced trading platform requiring initial investment to participate in high-yield opportunities.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-windows">Web</span><span class="badge badge-android">Mobile</span>
+</div>
+<p class="text-xs text-[#f87171] mb-4">Yield: Trading Profits</p>
+</div>
+<p class="text-sm font-bold text-white bg-[#0d1117] border border-[#30363d] p-2 rounded text-center">Ref Code: <span class="text-[#f87171]">MN2O5W</span></p>
+</div>
+<!-- Ether.fi -->
+<div class="bg-card p-6 rounded-xl hover:border-[#f87171] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="Ether.fi Logo" class="project-logo mr-3 bg-white" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=ether.fi&amp;sz=128';" src="https://logo.clearbit.com/ether.fi"/>
+<h4 class="text-xl font-bold text-white">Ether.fi</h4>
+</div>
+<span class="badge mt-1" style="background:#f87171">Staking</span>
+</div>
+<p class="text-sm text-gray-400 mb-4">Decentralized, non-custodial liquid restaking protocol on Ethereum. Requires ETH investment to earn yield and airdrop points.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-windows">Web</span>
+</div>
+<p class="text-xs text-[#f87171] mb-4">Yield: ETH / Points</p>
+</div>
+<a class="block text-center text-white font-bold py-2 rounded-md transition mt-auto hover:opacity-80" href="https://www.ether.fi/refer/520feb4e" style="background-color: #f87171;" target="_blank">Join Ether.fi</a>
+</div>
+</div>
+</section>
+<section class="mb-20" id="devices">
+<div class="flex items-center mb-8">
+<div class="w-2 h-8 bg-[#8957e5] rounded mr-4"></div>
+<h3 class="text-3xl font-bold text-white">Web3 Devices &amp; Airdrop Hardware</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Solana Mobile -->
+<div class="bg-card p-6 rounded-xl hover:border-[#8957e5] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="Solana Logo" class="project-logo mr-3" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=solanamobile.com&amp;sz=128';" src="https://logo.clearbit.com/solanamobile.com"/>
+<h4 class="text-xl font-bold text-white leading-tight">Solana Mobile<br/><span class="text-sm font-normal text-gray-400">(Saga/Seeker)</span></h4>
+</div>
+</div>
+<span class="badge badge-device mb-4 inline-block">Mobile Phone</span>
+<p class="text-sm text-gray-400 mb-4">A Web3 native smartphone. The original Saga famously paid for itself multiple times over via massive ecosystem airdrops (BONK, MEW, etc.).</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-android">Custom Android</span>
+</div>
+<p class="text-xs font-bold text-[#8957e5] mb-4">Investment: $450 - $1000+</p>
+</div>
+<a class="block text-center btn-visit-hw font-bold py-2 rounded-md transition mt-auto" href="https://solanamobile.com/" target="_blank">Visit Website</a>
+</div>
+<!-- Play Solana Gen 1 -->
+<div class="bg-card p-6 rounded-xl hover:border-[#8957e5] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="Play PSG1 Logo" class="project-logo mr-3" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=playsolana.com&amp;sz=128';" src="https://logo.clearbit.com/playsolana.com"/>
+<h4 class="text-xl font-bold text-white leading-tight">Play PSG1<br/><span class="text-sm font-normal text-gray-400">SuiPlay0X1</span></h4>
+</div>
+</div>
+<span class="badge badge-device mb-4 inline-block">Gaming Handheld</span>
+<p class="text-sm text-gray-400 mb-4">Web3 gaming handheld consoles integrating wallet hardware. Early buyers are highly speculated to receive ecosystem token airdrops and gaming NFTs.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-windows">Windows/Linux OS</span>
+</div>
+<p class="text-xs font-bold text-[#8957e5] mb-4">Investment: $500 - $600</p>
+</div>
+<a class="block text-center btn-visit-hw font-bold py-2 rounded-md transition mt-auto" href="https://playsolana.com/" target="_blank">Visit Website</a>
+</div>
+<!-- JamboPhone -->
+<div class="bg-card p-6 rounded-xl hover:border-[#8957e5] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="Jambo Logo" class="project-logo mr-3" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=jambo.technology&amp;sz=128';" src="https://logo.clearbit.com/jambo.technology"/>
+<h4 class="text-xl font-bold text-white">JamboPhone</h4>
+</div>
+</div>
+<span class="badge badge-device mb-4 inline-block">Budget Smartphone</span>
+<p class="text-sm text-gray-400 mb-4">A $99 Web3 smartphone aimed at emerging markets. Comes pre-loaded with JamboApp and partner apps offering quests and token rewards.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-android">Android</span>
+</div>
+<p class="text-xs font-bold text-[#8957e5] mb-4">Investment: ~$99</p>
+</div>
+<a class="block text-center btn-visit-hw font-bold py-2 rounded-md transition mt-auto" href="https://www.jambo.technology/" target="_blank">Visit Website</a>
+</div>
+</div>
+</section>
+<!-- Section 3: Paid / Hardware Required -->
+<section id="paid">
+<div class="flex items-center mb-8">
+<div class="w-2 h-8 bg-[#d29922] rounded mr-4"></div>
+<h3 class="text-3xl font-bold text-white">DePIN Infrastructure Hardware</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- io.net -->
+<div class="bg-card p-6 rounded-xl hover:border-[#d29922] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="io.net Logo" class="project-logo mr-3 bg-black" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=io.net&amp;sz=128';" src="https://logo.clearbit.com/io.net"/>
+<h4 class="text-xl font-bold text-white leading-tight">io.net<br/><span class="text-sm font-normal text-gray-400">Render</span></h4>
+</div>
+</div>
+<span class="badge mb-4 inline-block" style="background: #d29922;">GPU Compute</span>
+<p class="text-sm text-gray-400 mb-4">Provide GPU computing power for AI and 3D rendering. Highly profitable for existing mining rigs with mid-to-high-end NVIDIA/AMD GPUs.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-windows">Windows</span><span class="badge badge-linux">Ubuntu</span>
+</div>
+<p class="text-xs font-bold text-[#d29922] mb-4">Investment: Existing GPUs / Rig Cost</p>
+</div>
+<a class="block text-center btn-visit-dp font-bold py-2 rounded-md transition mt-auto" href="https://io.net/" target="_blank">Visit Website</a>
+</div>
+<!-- Hivemapper -->
+<div class="bg-card p-6 rounded-xl hover:border-[#d29922] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="Hivemapper Logo" class="project-logo mr-3" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=hivemapper.com&amp;sz=128';" src="https://logo.clearbit.com/hivemapper.com"/>
+<h4 class="text-xl font-bold text-white">Hivemapper</h4>
+</div>
+</div>
+<span class="badge mb-4 inline-block" style="background: #d29922;">Dashcam Hardware</span>
+<p class="text-sm text-gray-400 mb-4">Drive and earn by collecting street-level imagery with a specialized crypto dashcam. Great for commuters or gig-economy drivers.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-android">Android App Sync</span>
+</div>
+<p class="text-xs font-bold text-[#d29922] mb-4">Investment: ~$300-$600 Hardware</p>
+</div>
+<a class="block text-center btn-visit-dp font-bold py-2 rounded-md transition mt-auto" href="https://hivemapper.com/" target="_blank">Visit Website</a>
+</div>
+<!-- Helium -->
+<div class="bg-card p-6 rounded-xl hover:border-[#d29922] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="Helium Logo" class="project-logo mr-3" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=helium.com&amp;sz=128';" src="https://logo.clearbit.com/helium.com"/>
+<h4 class="text-xl font-bold text-white leading-tight">Helium<br/><span class="text-sm font-normal text-gray-400">5G &amp; IoT</span></h4>
+</div>
+</div>
+<span class="badge mb-4 inline-block" style="background: #d29922;">Hotspot Hardware</span>
+<p class="text-sm text-gray-400 mb-4">Deploy long-range wireless coverage (LoRaWAN) or 5G cell radios to earn tokens. Location density highly dictates earnings.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-windows">Web Dashboard</span>
+</div>
+<p class="text-xs font-bold text-[#d29922] mb-4">Investment: ~$200-$1000+ Hardware</p>
+</div>
+<a class="block text-center btn-visit-dp font-bold py-2 rounded-md transition mt-auto" href="https://www.helium.com/" target="_blank">Visit Website</a>
+</div>
+<!-- DIMO -->
+<div class="bg-card p-6 rounded-xl hover:border-[#d29922] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="DIMO Logo" class="project-logo mr-3 bg-white" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=dimo.zone&amp;sz=128';" src="https://logo.clearbit.com/dimo.zone"/>
+<h4 class="text-xl font-bold text-white">DIMO</h4>
+</div>
+</div>
+<span class="badge mb-4 inline-block" style="background: #d29922;">OBD2 Hardware</span>
+<p class="text-sm text-gray-400 mb-4">Plug a hardware device into your car's OBD2 port to collect telemetry data. Earn baseline weekly rewards plus bonuses for driving.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-android">Android App Sync</span>
+</div>
+<p class="text-xs font-bold text-[#d29922] mb-4">Investment: ~$300 AutoPi/Macaron</p>
+</div>
+<a class="block text-center btn-visit-dp font-bold py-2 rounded-md transition mt-auto" href="https://dimo.zone/" target="_blank">Visit Website</a>
+</div>
+<!-- WeatherXM -->
+<div class="bg-card p-6 rounded-xl hover:border-[#d29922] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="WeatherXM Logo" class="project-logo mr-3 bg-white" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=weatherxm.com&amp;sz=128';" src="https://logo.clearbit.com/weatherxm.com"/>
+<h4 class="text-xl font-bold text-white">WeatherXM</h4>
+</div>
+</div>
+<span class="badge mb-4 inline-block" style="background: #d29922;">Weather Station</span>
+<p class="text-sm text-gray-400 mb-4">Deploy a Web3 weather station outside your home. Collect hyper-local weather data and get rewarded in WXM tokens daily.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-android">Android App Sync</span>
+</div>
+<p class="text-xs font-bold text-[#d29922] mb-4">Investment: ~$400 Hardware</p>
+</div>
+<a class="block text-center btn-visit-dp font-bold py-2 rounded-md transition mt-auto" href="https://weatherxm.com/" target="_blank">Visit Website</a>
+</div>
+<!-- GEODNET -->
+<div class="bg-card p-6 rounded-xl hover:border-[#d29922] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="GEODNET Logo" class="project-logo mr-3 bg-white" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=geodnet.com&amp;sz=128';" src="https://logo.clearbit.com/geodnet.com"/>
+<h4 class="text-xl font-bold text-white">GEODNET</h4>
+</div>
+</div>
+<span class="badge mb-4 inline-block" style="background: #d29922;">GNSS Antenna</span>
+<p class="text-sm text-gray-400 mb-4">Install a rooftop GPS/GNSS antenna to provide centimeter-level accuracy to autonomous vehicles, drones, and agriculture.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-windows">Web Dashboard</span>
+</div>
+<p class="text-xs font-bold text-[#d29922] mb-4">Investment: ~$500+ Hardware</p>
+</div>
+<a class="block text-center btn-visit-dp font-bold py-2 rounded-md transition mt-auto" href="https://geodnet.com/" target="_blank">Visit Website</a>
+</div>
+<!-- DIMO -->
+<!-- WeatherXM -->
+<!-- GEODNET -->
+</div></section>
+<!-- Section 4: Other / Non-Crypto Bandwidth -->
+<section class="mb-20" id="bandwidth">
+<div class="flex items-center mb-8">
+<div class="w-2 h-8 bg-[#0ea5e9] rounded mr-4"></div>
+<h3 class="text-3xl font-bold text-white">Fiat &amp; Other Bandwidth Sharing</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Pawns.app -->
+<div class="bg-card p-6 rounded-xl hover:border-[#0ea5e9] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="Pawns Logo" class="project-logo mr-3" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=pawns.app&amp;sz=128';" src="https://logo.clearbit.com/pawns.app"/>
+<h4 class="text-xl font-bold text-white">Pawns.app</h4>
+</div>
+<span class="badge mt-1" style="background:#0ea5e9">App</span>
+</div>
+<p class="text-sm text-gray-400 mb-4">Share your internet connection and earn cash, Bitcoin, or gift cards effortlessly.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-windows">Windows</span><span class="badge badge-linux">Linux</span><span class="badge badge-android">Android</span>
+</div>
+<p class="text-xs text-[#0ea5e9] mb-4">Yield: Fiat / Crypto / Gift Cards</p>
+</div>
+<a class="block text-center text-white font-bold py-2 rounded-md transition mt-auto hover:opacity-80" href="https://pawns.app/?r=583859" style="background-color: #0ea5e9;" target="_blank">Join Pawns.app</a>
+</div>
+<!-- Honeygain -->
+<div class="bg-card p-6 rounded-xl hover:border-[#0ea5e9] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="Honeygain Logo" class="project-logo mr-3" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=honeygain.com&amp;sz=128';" src="https://logo.clearbit.com/honeygain.com"/>
+<h4 class="text-xl font-bold text-white">Honeygain</h4>
+</div>
+<span class="badge mt-1" style="background:#0ea5e9">App</span>
+</div>
+<p class="text-sm text-gray-400 mb-4">The original passive income app. Earn money simply by sharing your internet connection.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-windows">Windows</span><span class="badge badge-linux">Linux</span><span class="badge badge-android">Android</span>
+</div>
+<p class="text-xs text-[#0ea5e9] mb-4">Yield: Fiat / JMPT</p>
+</div>
+<a class="block text-center text-white font-bold py-2 rounded-md transition mt-auto hover:opacity-80" href="https://join.honeygain.com/J55E4335" style="background-color: #0ea5e9;" target="_blank">Join Honeygain</a>
+</div>
+<!-- Titan Network -->
+<div class="bg-card p-6 rounded-xl hover:border-[#0ea5e9] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="Titan Network Logo" class="project-logo mr-3" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=titannet.io&amp;sz=128';" src="https://logo.clearbit.com/titannet.io"/>
+<h4 class="text-xl font-bold text-white leading-tight">Titan Network</h4>
+</div>
+<span class="badge mt-1" style="background:#0ea5e9">Node</span>
+</div>
+<p class="text-sm text-gray-400 mb-4">A decentralized resource network for bandwidth and storage sharing.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-windows">Windows</span><span class="badge badge-linux">Linux</span><span class="badge badge-android">Android</span>
+</div>
+<p class="text-xs text-[#0ea5e9] mb-4">Yield: Titan Tokens</p>
+</div>
+<div class="mt-auto flex gap-2">
+<a class="flex-1 text-center text-sm font-bold py-2 rounded-md transition hover:opacity-80 bg-gray-700 text-white" href="/guides/titan-network-guide.md" target="_blank">Guide</a>
+<a class="flex-1 text-center text-sm font-bold py-2 rounded-md transition hover:opacity-80 text-white" href="https://test1.titannet.io/intiveRegister?code=tbXASf" style="background-color: #0ea5e9;" target="_blank">Join</a>
+</div>
+</div>
+<!-- Earn.fm -->
+<div class="bg-card p-6 rounded-xl hover:border-[#0ea5e9] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="Earn.fm Logo" class="project-logo mr-3" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=earn.fm&amp;sz=128';" src="https://logo.clearbit.com/earn.fm"/>
+<h4 class="text-xl font-bold text-white">Earn.fm</h4>
+</div>
+<span class="badge mt-1" style="background:#0ea5e9">App</span>
+</div>
+<p class="text-sm text-gray-400 mb-4">Securely share your unused internet bandwidth and get paid automatically.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-windows">Windows</span><span class="badge badge-linux">Linux</span><span class="badge badge-android">Android</span>
+</div>
+<p class="text-xs text-[#0ea5e9] mb-4">Yield: Fiat</p>
+</div>
+<a class="block text-center text-white font-bold py-2 rounded-md transition mt-auto hover:opacity-80" href="https://earn.fm/ref/MICEDAT0" style="background-color: #0ea5e9;" target="_blank">Join Earn.fm</a>
+</div>
+<!-- ProxyLite -->
+<div class="bg-card p-6 rounded-xl hover:border-[#0ea5e9] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="ProxyLite Logo" class="project-logo mr-3" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=proxylite.ru&amp;sz=128';" src="https://logo.clearbit.com/proxylite.ru"/>
+<h4 class="text-xl font-bold text-white">ProxyLite</h4>
+</div>
+<span class="badge mt-1" style="background:#0ea5e9">App</span>
+</div>
+<p class="text-sm text-gray-400 mb-4">Monetize your internet traffic with this lightweight background application.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-windows">Windows</span><span class="badge badge-android">Android</span>
+</div>
+<p class="text-xs text-[#0ea5e9] mb-4">Yield: Fiat</p>
+</div>
+<a class="block text-center text-white font-bold py-2 rounded-md transition mt-auto hover:opacity-80" href="https://proxylite.ru/?r=75NHXLIP&amp;utm_source=MY_TARGET" style="background-color: #0ea5e9;" target="_blank">Join ProxyLite</a>
+</div>
+<!-- PacketStream -->
+<div class="bg-card p-6 rounded-xl hover:border-[#0ea5e9] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="PacketStream Logo" class="project-logo mr-3" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=packetstream.io&amp;sz=128';" src="https://logo.clearbit.com/packetstream.io"/>
+<h4 class="text-xl font-bold text-white">PacketStream</h4>
+</div>
+<span class="badge mt-1" style="background:#0ea5e9">App</span>
+</div>
+<p class="text-sm text-gray-400 mb-4">A peer-to-peer proxy network where packeteers are compensated for sharing bandwidth.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-windows">Windows</span><span class="badge badge-linux">Linux</span>
+</div>
+<p class="text-xs text-[#0ea5e9] mb-4">Yield: Fiat</p>
+</div>
+<a class="block text-center text-white font-bold py-2 rounded-md transition mt-auto hover:opacity-80" href="https://packetstream.io/?psr=5t2C" style="background-color: #0ea5e9;" target="_blank">Join PacketStream</a>
+</div>
+<!-- Mysterium Network -->
+<div class="bg-card p-6 rounded-xl hover:border-[#0ea5e9] transition duration-300">
+<div class="card-content">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center">
+<img alt="Mysterium Logo" class="project-logo mr-3 bg-white" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=mysterium.network&amp;sz=128';" src="https://logo.clearbit.com/mysterium.network"/>
+<h4 class="text-xl font-bold text-white leading-tight">Mysterium<br/><span class="text-sm font-normal text-gray-400">MystNodes</span></h4>
+</div>
+<span class="badge mt-1" style="background:#0ea5e9">Node</span>
+</div>
+<p class="text-sm text-gray-400 mb-4">Run a decentralized VPN node. Share your IP and bandwidth securely to earn MYST (which can be swapped for fiat or stablecoins).</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="badge badge-windows">Windows</span><span class="badge badge-linux">Linux</span><span class="badge badge-android">Android</span>
+</div>
+<p class="text-xs text-[#0ea5e9] mb-4">Yield: MYST / Crypto</p>
+</div>
+<a class="block text-center text-white font-bold py-2 rounded-md transition mt-auto hover:opacity-80" href="https://mystnodes.com/" style="background-color: #0ea5e9;" target="_blank">Visit Website</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-[#30363d] bg-[#0d1117] mt-12 py-8 text-center text-sm text-gray-500">
+<p>Built exclusively for Web3 DePIN tracking &amp; Airdrop hunting. Information updated for 2026.</p>
+<p class="mt-2 text-xs">Disclaimer: Crypto investments carry risk. Do your own research before buying hardware or running untrusted extensions.</p>
+</footer>
+</body>
+</html>
