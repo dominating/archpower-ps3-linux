@@ -15,3 +15,7 @@
 - **Auto-Scout Loop**: Configured via `HEARTBEAT.md` to run every 24 hours. Scouts new DePIN projects using `web_search`, notifies via Telegram, and automatically writes guides/deploys to Vercel upon approval.
 - **Video Generator**: Remotion skill is installed and configured for programmatic motion graphics (`skills_log.md`), though currently not displaying correctly on the main `depin-hub` page.
 - **Jordan Homepage**: Built and deployed a CiferTech-inspired cyberpunk/minimalist homepage at jordan-homepage-sigma.vercel.app, linking back to the DePIN Hub.
+
+## Recent 2026-03-16 Insights
+- **DePIN Hub UI Update**: Converted bulky DePIN Hub HTML cards to a spreadsheet-friendly table layout matching the CiferTech-inspired aesthetic of the personal homepage.
+- **Auto-Scout Executed**: Deployed guides for DataHive AI, YOM Network, and Titan Network to the hub. Established a 24-hour Scout loop via HEARTBEAT.md.
