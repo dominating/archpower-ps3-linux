@@ -19,3 +19,8 @@
 ## Recent 2026-03-16 Insights
 - **DePIN Hub UI Update**: Converted bulky DePIN Hub HTML cards to a spreadsheet-friendly table layout matching the CiferTech-inspired aesthetic of the personal homepage.
 - **Auto-Scout Executed**: Deployed guides for DataHive AI, YOM Network, and Titan Network to the hub. Established a 24-hour Scout loop via HEARTBEAT.md.
+
+## Recent 2026-03-17 Insights
+- **PS3 Remote Play Port**: Began porting `open-rp` to modern C/C++ for Chiaki integration. Isolated auth and crypto logic.
+- **ESP32-S2 Mining**: Built an optimized NerdMiner V2 firmware for the ZY ESP32-S2 to mine Digibyte (DGB) with dynamic thermal throttling at 75°C and aggressive `-O3` `-ffast-math` compilation flags. Hosted the binary (`nerdminer-dgb-merged.bin`) and guide on DePIN Hub.
+- **Auto-Scout Executed**: Scouted ARO Network and Dawn Network; awaiting user green light on Telegram.
