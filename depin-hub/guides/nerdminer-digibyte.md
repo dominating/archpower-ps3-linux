@@ -28,7 +28,7 @@ You do not need to install Python or use the command line (`esptool.py`) to flas
 2. Open Google Chrome or Microsoft Edge (Safari/Firefox do not support Web Serial).
 3. Go to the official **[Espressif Web Flasher (esptool-js)](https://espressif.github.io/esptool-js/)**.
 4. Plug your ESP32-S2 into your computer via USB. *(If it's not recognized, hold the `BOOT` button on the board while plugging it in).*
-5. Change the **Baudrate** dropdown to `460800`.
+5. Change the **Baudrate** dropdown to `115200`.
 6. Click the **Connect** button and select the USB/COM port for your ESP32 from the browser popup.
 7. In the **Program** section that appears:
    - Set the **Flash Address** to `0x0`.
