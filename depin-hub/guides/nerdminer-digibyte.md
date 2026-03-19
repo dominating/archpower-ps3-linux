@@ -22,17 +22,18 @@ Example pools:
 
 ## 3. Flashing the Firmware
 
-### Option A: Web Flasher (Easiest)
-1. Go to the [NerdMiner Web Flasher](https://flasher.bitronics.store/).
-2. Select **NerdMinerV2** and your board type (**ESP32-S2**).
-3. Connect your ESP32-S2 via USB while holding the `BOOT` button (to enter download mode).
-4. Click **Flash**, select the COM port, and wait for completion.
+You do not need to install Python or use the command line (`esptool.py`) to flash your ESP32-S2. You can flash the compiled `.bin` file directly from your browser.
 
-### Option B: Command Line (esptool)
-If you downloaded the compiled `.bin` file:
-```bash
-esptool.py -p /dev/ttyACM0 -b 460800 --before default_reset --after hard_reset --chip esp32s2 write_flash --flash_mode dio --flash_freq 80m --flash_size 4MB 0x10000 merged_nm_v2_s2.bin
-```
+1. Download the custom compiled firmware from the DePIN Hub homepage.
+2. Open Google Chrome or Microsoft Edge (Safari/Firefox do not support Web Serial).
+3. Go to the official **[Espressif Web Flasher (esptool-js)](https://espressif.github.io/esptool-js/)**.
+4. Plug your ESP32-S2 into your computer via USB. *(If it's not recognized, hold the `BOOT` button on the board while plugging it in).*
+5. Change the **Baudrate** dropdown to `460800`.
+6. Click the **Connect** button and select the USB/COM port for your ESP32 from the browser popup.
+7. In the **Program** section that appears:
+   - Set the **Flash Address** to `0x0`.
+   - Click **Choose File** and select your downloaded `nerdminer-dgb-merged.bin` file.
+8. Click **Program** and wait for the progress bar to reach 100%.
 
 ## 4. Configuration
 
