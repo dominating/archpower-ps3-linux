@@ -26,3 +26,7 @@
 - **DuinoCoin**: Updated the DuinoCoin guide to utilize the `esptool-js` Web Flasher. Generated and delivered a hidden, hardcoded custom firmware for the user, then permanently deleted it.
 - **Discord Scraper Skill**: Installed the `discord-intel` secure scraping pipeline. Received Bot Token `MTQ4MzYxMTYxMDIyMzIxODY4OA.GM6EgS.KUnL7VrFx1JW6xBZYfT2jM6PWaJddIW6v5PZrM`, currently waiting for the user to invite the bot to the target servers.
 - **ARO Network**: Added ARO Network (Lite Node) to the DePIN Hub.
+
+## Recent 2026-03-20 Insights
+- **PS3 Remote Play Port**: Spun up a sub-agent to continue porting `open-rp` to modern C/C++ for Chiaki integration, focusing on HTTP logic and codecs renderer.
+- **DePIN Hub Auto-Scout**: Discovered and added MyGate Network ($MYG) and DeepNode ($DN) to the PassivePin hub (`depin-hub.vercel.app`). Pushed updates locally and triggered a Vercel deployment without generating full Markdown guides, confirming the user's preference for fast, minimal executions for new additions unless requested otherwise.
