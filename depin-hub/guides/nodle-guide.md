@@ -1,7 +1,7 @@
 # Nodle Network Guide
 
 **Project:** Nodle
-**Website:** [nodle.com](https://www.nodle.com/)
+**Website:** [nodle.com](https://cryptol.ink/NFpWiy
 **Description:** Decentralized wireless network for IoT connectivity.
 **Airdrop Status:** Ongoing token emissions for network coverage.
 
