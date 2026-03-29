@@ -30,3 +30,8 @@
 ## Recent 2026-03-20 Insights
 - **PS3 Remote Play Port**: Spun up a sub-agent to continue porting `open-rp` to modern C/C++ for Chiaki integration, focusing on HTTP logic and codecs renderer.
 - **DePIN Hub Auto-Scout**: Discovered and added MyGate Network ($MYG) and DeepNode ($DN) to the PassivePin hub (`depin-hub.vercel.app`). Pushed updates locally and triggered a Vercel deployment without generating full Markdown guides, confirming the user's preference for fast, minimal executions for new additions unless requested otherwise.
+
+## Recent 2026-03-27/28 Insights
+- **DePIN Hub (PassivePin) Live Launch**: Successfully registered and connected the `passivepin.xyz` custom domain (via Spaceship/Vercel) for the DePIN directory. Implemented an automated Node.js script to shorten all external site URLs via the `cryptol.ink` API to earn satoshis.
+- **PS3 Remote Play (`libps3rp`)**: Successfully patched the legacy `open-rp` FFmpeg dependencies to compile on modern Linux. Sliced the core C++ logic (auth, crypto, networking) into an isolated `libps3rp.so` shared library with JNI wrappers to allow future integration with Chiaki-NG/Android via MediaCodec.
+- **PS3 Homebrew Revival (Super Mario War)**: Launched a new project dedicated to completing stalled PS3 homebrew ports and reviving canceled games. Began porting `SMW-PS3` to a modern PSL1GHT/SDL2 toolchain, successfully ripping out legacy hardware polling (`<io/pad.h>`) in favor of hardware-accelerated SDL2 renderers and event loops.
