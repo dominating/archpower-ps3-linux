@@ -35,3 +35,6 @@
 - **DePIN Hub (PassivePin) Live Launch**: Successfully registered and connected the `passivepin.xyz` custom domain (via Spaceship/Vercel) for the DePIN directory. Implemented an automated Node.js script to shorten all external site URLs via the `cryptol.ink` API to earn satoshis.
 - **PS3 Remote Play (`libps3rp`)**: Successfully patched the legacy `open-rp` FFmpeg dependencies to compile on modern Linux. Sliced the core C++ logic (auth, crypto, networking) into an isolated `libps3rp.so` shared library with JNI wrappers to allow future integration with Chiaki-NG/Android via MediaCodec.
 - **PS3 Homebrew Revival (Super Mario War)**: Launched a new project dedicated to completing stalled PS3 homebrew ports and reviving canceled games. Began porting `SMW-PS3` to a modern PSL1GHT/SDL2 toolchain, successfully ripping out legacy hardware polling (`<io/pad.h>`) in favor of hardware-accelerated SDL2 renderers and event loops.
+
+## Recent 2026-03-29 Insights
+- **DePIN Hub (PassivePin) Feature Additions**: Enhanced `passivepin.xyz` with active hardware giveaways (e.g., NerdQAxe++, Bitaxe GT 800) and added mobile App Store / Google Play download buttons to applicable DePIN nodes (DataHive AI, MyGate Network, Silencio, NodeGo AI) to increase mobile user acquisition.
