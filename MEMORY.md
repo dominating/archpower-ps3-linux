@@ -38,3 +38,6 @@
 
 ## Recent 2026-03-29 Insights
 - **DePIN Hub (PassivePin) Feature Additions**: Enhanced `passivepin.xyz` with active hardware giveaways (e.g., NerdQAxe++, Bitaxe GT 800) and added mobile App Store / Google Play download buttons to applicable DePIN nodes (DataHive AI, MyGate Network, Silencio, NodeGo AI) to increase mobile user acquisition.
+
+## Recent 2026-04-01 Insights
+- **PS3 Development & Consulting:** Deployed the `sfm_ps3_smb2_patched.pkg` to the `depin-hub` downloads directory. Advised the user on the technical impossibilities of running x86/Linux-based ethical hacking tools and Box86/Steam natively on RISC OS (Raspberry Pi 4) or OpenCore/Mac OS X natively on the PS3 Cell Broadband Engine due to fundamentally different CPU architectures.
