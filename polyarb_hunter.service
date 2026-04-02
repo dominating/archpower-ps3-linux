@@ -1,0 +1,17 @@
+[Unit]
+Description=PolyArb Hunter Arbitrage Bot (v3 Logic with venv)
+After=network.target
+
+[Service]
+User=micemeat
+WorkingDirectory=/home/micemeat/.openclaw/workspace
+# The Tavily key is hardcoded here as a fallback, though a proper Gateway env var is preferred.
+Environment="TAVILY_API_KEY=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"
+# Use the Python executable from the virtual environment
+ExecStart=/home/micemeat/.openclaw/workspace/.venv/bin/python3 /home/micemeat/.openclaw/workspace/polyarb_hunter_v3.py
+Restart=on-failure
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

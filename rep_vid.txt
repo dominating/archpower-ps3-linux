@@ -1,0 +1,10 @@
+		int ret = avcodec_send_packet(context, &packet->pkt);
+		bytes_decoded = -1;
+		frame_done = 0;
+		if (ret >= 0) {
+			ret = avcodec_receive_frame(context, frame);
+			if (ret >= 0) {
+				frame_done = 1;
+				bytes_decoded = packet->pkt.size;
+			}
+		}

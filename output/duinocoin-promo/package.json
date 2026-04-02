@@ -1,0 +1,21 @@
+{
+  "name": "duinocoin-promo",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npx remotion studio",
+    "build": "npx remotion bundle",
+    "render": "npx remotion render"
+  },
+  "dependencies": {
+    "lucide-react": "^0.300.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "remotion": "4.0.245"
+  },
+  "devDependencies": {
+    "@remotion/cli": "4.0.245",
+    "@types/react": "^18.0.0",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.0.0"
+  }
+}

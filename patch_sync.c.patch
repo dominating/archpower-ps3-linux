@@ -1,0 +1,61 @@
+--- output/libsmb2-ps3/lib/sync.c	2023-10-10 10:10:10.000000000 +0000
++++ output/libsmb2-ps3/lib/sync.c	2023-10-10 10:10:10.000000000 +0000
+@@ -68,6 +68,7 @@
+         time_t t = time(NULL);
+ 
+         while (!cb_data->is_finished) {
++#if !defined(__PS3__) && !defined(PS3_PPU_PLATFORM)
+ 		struct pollfd pfd;
+ 		memset(&pfd, 0, sizeof(struct pollfd));
+ 		pfd.fd = smb2_get_fd(smb2);
+@@ -77,6 +78,25 @@
+ 			smb2_set_error(smb2, "Poll failed");
+ 			return -1;
+ 		}
++#else
++		fd_set readfds, writefds, exceptfds;
++		struct timeval tv;
++		int fd = smb2_get_fd(smb2);
++		int events = smb2_which_events(smb2);
++		int revents = 0;
++		
++		FD_ZERO(&readfds);
++		FD_ZERO(&writefds);
++		FD_ZERO(&exceptfds);
++		if (events & POLLIN) FD_SET(fd, &readfds);
++		if (events & POLLOUT) FD_SET(fd, &writefds);
++		FD_SET(fd, &exceptfds);
++		tv.tv_sec = 1;
++		tv.tv_usec = 0;
++		if (select(fd + 1, &readfds, &writefds, &exceptfds, &tv) < 0) {
++			smb2_set_error(smb2, "Select failed");
++			return -1;
++		}
++#endif
+                 if (smb2->timeout) {
+                         smb2_timeout_pdus(smb2);
+                 }
+@@ -84,10 +104,18 @@
+ 		{
+ 			smb2_set_error(smb2, "Timeout expired and no connection exists\n");
+ 			return -1;
+-		}                
+-                if (pfd.revents == 0) {
+-                        continue;
+-                }
+-		if (smb2_service(smb2, pfd.revents) < 0) {
++		}
++#if !defined(__PS3__) && !defined(PS3_PPU_PLATFORM)
++		revents = pfd.revents;
++#else
++		if (FD_ISSET(fd, &readfds)) revents |= POLLIN;
++		if (FD_ISSET(fd, &writefds)) revents |= POLLOUT;
++		if (FD_ISSET(fd, &exceptfds)) revents |= POLLERR;
++#endif
++                if (revents == 0) {
++                        continue;
++                }
++		if (smb2_service(smb2, revents) < 0) {
+ 			smb2_set_error(smb2, "smb2_service failed with : "
+                                         "%s\n", smb2_get_error(smb2));
+                         return -1;

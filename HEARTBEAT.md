@@ -17,3 +17,6 @@
 - Summarize the consolidation in the daily note.
 
 
+
+
+# ==========================================

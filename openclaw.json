@@ -1,0 +1,25 @@
+{
+  "browser": {
+    "enabled": true,
+    "defaultProfile": "openclaw",
+    "headless": true,
+    "attachOnly": false,
+    "noSandbox": true,
+    "profiles": {
+      "openclaw": {
+        "headless": true,
+        "args": ["--disable-dev-shm-usage", "--disable-gpu", "--remote-debugging-port=18800"]
+      }
+    }
+  },
+  "heartbeat": {
+    "intervalMinutes": 30,
+    "tasks": [
+      "Check daily note for open jobs; verify their sessions; restart or report as above."
+    ],
+    "memoryConsolidation": {
+      "enabled": true,
+      "schedule": "02:00 UTC"
+    }
+  }
+}

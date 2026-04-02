@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micemeat | PassivePin Founder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Noto+Sans+JP:wght@300;400;700&display=swap');
+        
+        body {
+            background-color: #050505;
+            color: #e2e8f0;
+            font-family: 'Space Grotesk', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            mask-image: linear-gradient(to bottom, transparent, black, transparent);
+            -webkit-mask-image: linear-gradient(to bottom, transparent 10%, black 50%, transparent 90%);
+        }
+
+        .jp-text {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #58a6ff;
+            opacity: 0.8;
+            letter-spacing: 0.2em;
+        }
+
+        .glitch-text {
+            position: relative;
+            color: white;
+        }
+
+        .glitch-text::before, .glitch-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.8;
+        }
+
+        .glitch-text::before {
+            left: 2px;
+            text-shadow: -2px 0 #ff00c1;
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim 5s infinite linear alternate-reverse;
+        }
+
+        .glitch-text::after {
+            left: -2px;
+            text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+            animation: glitch-anim2 5s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch-anim {
+            0% { clip: rect(21px, 9999px, 8px, 0); }
+            20% { clip: rect(72px, 9999px, 92px, 0); }
+            40% { clip: rect(10px, 9999px, 43px, 0); }
+            60% { clip: rect(88px, 9999px, 12px, 0); }
+            80% { clip: rect(31px, 9999px, 66px, 0); }
+            100% { clip: rect(54px, 9999px, 23px, 0); }
+        }
+
+        @keyframes glitch-anim2 {
+            0% { clip: rect(65px, 9999px, 100px, 0); }
+            20% { clip: rect(2px, 9999px, 24px, 0); }
+            40% { clip: rect(89px, 9999px, 55px, 0); }
+            60% { clip: rect(12px, 9999px, 88px, 0); }
+            80% { clip: rect(43px, 9999px, 10px, 0); }
+            100% { clip: rect(92px, 9999px, 72px, 0); }
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -10px rgba(88, 166, 255, 0.3);
+            border-color: #58a6ff;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #58a6ff, #8957e5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="relative min-h-screen flex flex-col items-center selection:bg-[#58a6ff] selection:text-black">
+    
+    <!-- Background Grid -->
+    <div class="fixed inset-0 w-full h-full bg-grid z-0 pointer-events-none"></div>
+
+    <!-- Navigation -->
+    <nav class="w-full max-w-5xl mx-auto px-6 py-8 relative z-10 flex justify-between items-center">
+        <div class="text-2xl font-bold tracking-tighter">MICEMEAT<span class="text-[#58a6ff]">.</span></div>
+        <div class="flex space-x-6 text-sm font-semibold tracking-widest uppercase">
+            <a href="#about" class="hover:text-[#58a6ff] transition">About</a>
+            <a href="#projects" class="hover:text-[#58a6ff] transition">Projects</a>
+            <a href="https://depin-hub.vercel.app" target="_blank" class="text-[#58a6ff] hover:text-white transition">DePIN Hub ↗</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="w-full max-w-5xl mx-auto px-6 py-20 relative z-10 flex flex-col justify-center flex-grow">
+        
+        <div class="mb-4">
+            <span class="jp-text text-sm font-bold block mb-2">私は MICEMEAT</span>
+            <h1 class="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tighter" data-text="I'M MICEMEAT">
+                <span class="glitch-text" data-text="I'M MICEMEAT">I'M MICEMEAT</span>
+            </h1>
+        </div>
+
+        <div class="max-w-2xl text-lg text-gray-400 leading-relaxed mb-12">
+            A tech enthusiast and Web3 builder focused on Decentralized Physical Infrastructure Networks (DePIN), custom ESP32 firmware, and automated passive income strategies. I build things that run silently in the background and generate yield.
+        </div>
+
+        <!-- Call to Action -->
+        <div class="flex items-center space-x-6">
+            <a href="https://depin-hub.vercel.app" target="_blank" class="group relative px-8 py-4 bg-transparent text-white font-bold uppercase tracking-widest border border-[#58a6ff] overflow-hidden">
+                <div class="absolute inset-0 bg-[#58a6ff] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out z-0"></div>
+                <span class="relative z-10 group-hover:text-black transition-colors duration-300">Explore PassivePin Hub</span>
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Projects Section -->
+    <section id="projects" class="w-full bg-[#0a0a0a] border-t border-gray-900 relative z-10 py-24">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="mb-16">
+                <span class="jp-text text-sm font-bold block mb-2">私のプロジェクト</span>
+                <h2 class="text-4xl font-bold uppercase tracking-tighter">My Projects</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- PassivePin -->
+                <a href="https://depin-hub.vercel.app" target="_blank" class="card-hover bg-[#111] border border-gray-800 p-8 rounded-lg block">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 bg-[#58a6ff]/20 rounded-lg flex items-center justify-center text-[#58a6ff]">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <span class="text-xs font-mono text-gray-500 bg-gray-900 px-3 py-1 rounded-full">ACTIVE</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">PassivePin Hub</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        The ultimate directory for DePIN nodes, bandwidth sharing extensions, and passive crypto yield opportunities. Auto-updated daily.
+                    </p>
+                    <span class="text-[#58a6ff] text-sm font-bold flex items-center">
+                        Launch Project <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </span>
+                </a>
+
+                <!-- Custom ESP32 Firmware -->
+                <div class="card-hover bg-[#111] border border-gray-800 p-8 rounded-lg">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 bg-[#8957e5]/20 rounded-lg flex items-center justify-center text-[#8957e5]">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+                        </div>
+                        <span class="text-xs font-mono text-gray-500 bg-gray-900 px-3 py-1 rounded-full">HARDWARE</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Headless Duino Miner</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Custom compiled C++ firmware for the ESP32-S2 USB Dongle. Stripped of monitor dependencies for silent, ultra-efficient DuinoCoin hashing.
+                    </p>
+                    <a href="https://depin-hub.vercel.app/guides/duinocoin-guide" class="text-[#8957e5] text-sm font-bold flex items-center hover:text-white transition">
+                        View Firmware <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w-full border-t border-gray-900 bg-[#050505] relative z-10 py-8">
+        <div class="max-w-5xl mx-auto px-6 flex justify-between items-center text-sm text-gray-600 font-mono">
+            <div>&copy; 2026 MICEMEAT. All rights reserved.</div>
+            <div class="flex space-x-4">
+                <a href="https://github.com/dominating" target="_blank" class="hover:text-white transition">GitHub</a>
+                <a href="https://x.com/micemeat" target="_blank" class="hover:text-white transition">X</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
