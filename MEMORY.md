@@ -41,3 +41,4 @@
 
 ## Recent 2026-04-01 Insights
 - **PS3 Development & Consulting:** Deployed the `sfm_ps3_smb2_patched.pkg` to the `depin-hub` downloads directory. Advised the user on the technical impossibilities of running x86/Linux-based ethical hacking tools and Box86/Steam natively on RISC OS (Raspberry Pi 4) or OpenCore/Mac OS X natively on the PS3 Cell Broadband Engine due to fundamentally different CPU architectures.
+- **PS3 Development & Consulting (2026-04-01):** Deployed sfm_ps3_smb2_patched.pkg to DePIN Hub. Advised user on hardware limits of PS3/Cell CPU (cannot run modern Linux desktop/browsers natively).
