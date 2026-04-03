@@ -35,9 +35,11 @@ static inline uint16_t SWAP_LE16(uint16_t x) {
 enum { AES_ENCRYPT, AES_DECRYPT };
 struct AES_KEY { uint8_t rd_key[4 * (14 + 1)]; int rounds; };
 
-extern void AES_set_decrypt_key(const uint8_t *userKey, const int bits, AES_KEY *key);
-extern void AES_set_encrypt_key(const uint8_t *userKey, const int bits, AES_KEY *key);
-extern void AES_cbc_encrypt(const uint8_t *in, uint8_t *out, size_t length, const AES_KEY *key, uint8_t *ivec, const int enc);
+extern "C" {
+void AES_set_decrypt_key(const uint8_t *userKey, const int bits, AES_KEY *key);
+void AES_set_encrypt_key(const uint8_t *userKey, const int bits, AES_KEY *key);
+void AES_cbc_encrypt(const uint8_t *in, uint8_t *out, size_t length, const AES_KEY *key, uint8_t *ivec, const int enc);
+}
 
 struct orpStreamPacketHeader_t {
     uint8_t magic[2];   // 2

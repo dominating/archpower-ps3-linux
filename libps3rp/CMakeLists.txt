@@ -34,12 +34,24 @@ else()
 endif()
 
 # Shared Library
+if(JNI_FOUND)
+    set(JNI_SRC src/ps3rp_jni.cpp)
+endif()
+
 add_library(ps3rp SHARED 
     src/ps3rp.cpp 
     src/base64.cpp 
     src/auth_crypto_isolated.cpp 
     src/stream_crypto.cpp
-    src/ps3rp_jni.cpp
+    ${JNI_SRC}
 )
 
-target_link_libraries(ps3rp ${OPENSSL_CRYPTO_LIBRARY})
+target_link_libraries(ps3rp OpenSSL::Crypto)
+
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(AVCODEC REQUIRED libavcodec libavutil)
+
+add_executable(ps3rp_test_client src/test_client.cpp src/av_decoder.cpp)
+target_include_directories(ps3rp_test_client PRIVATE ${AVCODEC_INCLUDE_DIRS})
+target_link_libraries(ps3rp_test_client ps3rp ${AVCODEC_LIBRARIES})
+
