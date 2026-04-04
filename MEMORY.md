@@ -42,3 +42,8 @@
 ## Recent 2026-04-01 Insights
 - **PS3 Development & Consulting:** Deployed the `sfm_ps3_smb2_patched.pkg` to the `depin-hub` downloads directory. Advised the user on the technical impossibilities of running x86/Linux-based ethical hacking tools and Box86/Steam natively on RISC OS (Raspberry Pi 4) or OpenCore/Mac OS X natively on the PS3 Cell Broadband Engine due to fundamentally different CPU architectures.
 - **PS3 Development & Consulting (2026-04-01):** Deployed sfm_ps3_smb2_patched.pkg to DePIN Hub. Advised user on hardware limits of PS3/Cell CPU (cannot run modern Linux desktop/browsers natively).
+
+## Recent 2026-04-03 Insights
+- **PS3 Remote Play Port (Chiaki Integration):** Successfully compiled the `libps3rp` shared library featuring a modern FFmpeg C++ `AVDecoder` wrapper, replacing legacy `open-rp` logic. Created a standalone CLI Linux testing client (`ps3rp_test_client`) to test the handshake and AV pipeline locally. Pushed the repository to GitHub: `https://github.com/dominating/ps3-rp-chiaki-port`.
+- **PS3 Linux OS (Scrapmetal):** Designed a minimal Linux environment using an ArchPOWER base instead of Debian to overcome the PS3's 256MB RAM limitation. Utilized Openbox, PCManFM daemon, urxvtd, and an `fbset` RSX hypervisor tweak (1280x720x32) to provide a usable desktop. Provided a live USB boot structure for Petitboot via `make_bootable_usb.sh`.
+- **KolibriOS:** Clarified that KolibriOS (x86 FASM) cannot natively boot on the PS3 Cell architecture and requires emulation (e.g. QEMU) via Linux OtherOS.
