@@ -47,3 +47,6 @@
 - **PS3 Remote Play Port (Chiaki Integration):** Successfully compiled the `libps3rp` shared library featuring a modern FFmpeg C++ `AVDecoder` wrapper, replacing legacy `open-rp` logic. Created a standalone CLI Linux testing client (`ps3rp_test_client`) to test the handshake and AV pipeline locally. Pushed the repository to GitHub: `https://github.com/dominating/ps3-rp-chiaki-port`.
 - **PS3 Linux OS (Scrapmetal):** Designed a minimal Linux environment using an ArchPOWER base instead of Debian to overcome the PS3's 256MB RAM limitation. Utilized Openbox, PCManFM daemon, urxvtd, and an `fbset` RSX hypervisor tweak (1280x720x32) to provide a usable desktop. Provided a live USB boot structure for Petitboot via `make_bootable_usb.sh`.
 - **KolibriOS:** Clarified that KolibriOS (x86 FASM) cannot natively boot on the PS3 Cell architecture and requires emulation (e.g. QEMU) via Linux OtherOS.
+
+## Recent 2026-04-04 Insights
+- **DePIN Hub Auto-Scout & Maintenance:** The automated scout loop identified three new node/mining projects: Chakra Network, Depinsim, and Interlink. Wrote markdown guides, integrated them into the `depin-hub` active nodes table, and deployed live to Vercel (`passivepin.xyz`). Successfully cleaned up the one-off memory consolidation cron block from `HEARTBEAT.md` to stabilize periodic tasks.
