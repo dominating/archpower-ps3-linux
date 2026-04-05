@@ -106,6 +106,7 @@
     <nav class="w-full max-w-7xl mx-auto px-6 py-8 relative z-10 flex justify-between items-center">
         <div class="text-2xl font-bold tracking-tighter">PASSIVEPIN<span class="text-[#58a6ff]">.</span></div>
         <div class="flex space-x-6 text-sm font-semibold tracking-widest uppercase">
+            <a href="/hardware-projects.html" class="text-white hover:text-[#58a6ff] transition mr-6">Hardware & Homebrew</a>
             <a href="https://cryptol.ink/pFRkJO" class="text-[#58a6ff] hover:text-white transition">Miceprogramming Hub ↗</a>
         </div>
     </nav>
@@ -123,27 +124,7 @@
             </p>
         </div>
 
-        <!-- Featured Guide (Hardcoded for Digibyte/NerdMiner) -->
-        <div class="w-full bg-[#111] border border-[#58a6ff]/30 p-6 mb-16 rounded-sm">
-            <h3 class="text-xl font-bold text-[#58a6ff] uppercase tracking-widest mb-2">Featured: ESP32-S2 Digibyte Miner (NerdMiner V2)</h3>
-            <p class="text-gray-400 text-sm mb-4">Optimized NM-TV/NerdMiner V2 firmware for the ZY ESP32-S2 USB Dongle (240MHz + Thermal Throttling @ 75°C). Configured for low-power SHA256 Digibyte (DGB) mining via solo/compatible pools.</p>
-            <div class="flex items-center gap-4">
-                <a href="/guides/nerdminer-digibyte.md" class="border border-[#58a6ff] text-[#58a6ff] text-xs font-bold px-4 py-2 hover:bg-[#58a6ff] hover:text-black transition uppercase">View Guide</a>
-                <a href="/firmware/s2/nerdminer-dgb-merged.bin" class="bg-[#58a6ff] text-black text-xs font-bold px-4 py-2 hover:bg-white transition uppercase">Download .bin</a>
-                <a href="https://cryptol.ink/HiJ7Ah" target="_blank" class="bg-[#f5a90f] text-black text-xs font-bold px-4 py-2 hover:bg-white transition uppercase">Web Flasher (Flash to 0x0)</a>
-            </div>
-        </div>
-
         
-        <!-- PS3 Homebrew (sfm_ps3 patched) -->
-        <div class="w-full bg-[#111] border border-[#58a6ff]/30 p-6 mb-16 rounded-sm">
-            <h3 class="text-xl font-bold text-[#58a6ff] uppercase tracking-widest mb-2">Homebrew: PS3 Simple File Manager (SMB2 Patched)</h3>
-            <p class="text-gray-400 text-sm mb-4">A custom fork of <a href="https://cryptol.ink/1OXxOy" class="text-white hover:underline" target="_blank">lmirel's Simple File Manager for PS3 (fm_psx)</a>. This build adds native <strong>SMB2 protocol support</strong>, allowing you to seamlessly map and browse remote Windows/NAS network drives directly via `smb0:/` alongside FAT32, NTFS, EXT, and SYS local storage.</p>
-            <div class="flex items-center gap-4">
-                <a href="/downloads/sfm_ps3_smb2_patched.pkg" class="bg-[#58a6ff] text-black text-xs font-bold px-4 py-2 hover:bg-white transition uppercase">Download .pkg</a>
-                <span class="text-xs text-gray-500 uppercase">Credits: Original project by lmirel (mirel.lazar) | SMB2 patch by Mice</span>
-            </div>
-        </div>
         <!-- LIVE GIVEAWAYS WIDGET -->
         <div class="mb-10 bg-[#0d1117] border border-gray-800 rounded-lg p-6 shadow-lg shadow-black/50">
             <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2 border-l-4 border-yellow-500 pl-3">
@@ -185,20 +166,26 @@
             </div>
         </div>
 
+        <div class="mb-8 p-4 bg-blue-900/20 border border-blue-500/30 rounded-md text-blue-200 text-sm">
+            <strong>Update:</strong> Custom ESP32 Firmware and PS3 Homebrew ports have been moved to the <a href="/hardware-projects.html" class="underline text-[#58a6ff] hover:text-white">Hardware & Homebrew section</a>.
+        </div>
+
+        
         <div class="mb-16 overflow-x-auto">
-            <h2 class="text-2xl font-bold uppercase tracking-tighter mb-4 text-white border-l-4 border-[#58a6ff] pl-3">Zero Investment (Upcoming & Active Nodes)</h2>
-            <table class="w-full text-left text-sm whitespace-nowrap">
-                <thead>
-                    <tr>
-                        <th class="px-4 py-4">Project</th>
-                        <th class="px-4 py-4">Description</th>
-                        <th class="px-4 py-4">Platforms</th>
-                        <th class="px-4 py-4">Yield / Reward</th>
-                        <th class="px-4 py-4 text-right">Action</th>
-                    </tr>
-                </thead>
-                
-<tr class="table-row-hover">
+            <h2 class="text-2xl font-bold uppercase tracking-tighter mb-4 text-white border-l-4 border-[#58a6ff] pl-3">1. Browser Extensions</h2>
+            <div class="bg-[#111] border border-gray-800 rounded-sm">
+                <table class="w-full text-left text-sm whitespace-nowrap">
+                    <thead>
+                        <tr class="bg-[#0a0a0a]">
+                            <th class="px-4 py-4">Project</th>
+                            <th class="px-4 py-4">Description</th>
+                            <th class="px-4 py-4">Platforms</th>
+                            <th class="px-4 py-4">Yield / Reward</th>
+                            <th class="px-4 py-4 text-right">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-300">
+                        <tr class="table-row-hover">
                         <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
                             <img src="https://logo.clearbit.com/dawninternet.com" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
                             DAWN Network
@@ -221,7 +208,7 @@
                             <a href="/guides/hednet-protocol.md" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Read Guide</a>
                         </td>
                     </tr>
-                    <tr class="table-row-hover">
+<tr class="table-row-hover">
                         <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
                             <img src="https://logo.clearbit.com/layeredge.io" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
                             LayerEdge
@@ -233,21 +220,7 @@
                             <a href="/guides/layeredge-guide.md" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Read Guide</a>
                         </td>
                     </tr>
-
-                    <tr class="table-row-hover">
-                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
-                            <img src="https://logo.clearbit.com/kaisar.io" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
-                            Kaisar Network
-                        </td>
-                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Decentralized AI and compute DePIN on the peaq blockchain. Earn from idle GPUs.">Decentralized AI and compute DePIN on the peaq blockchain...</td>
-                        <td class="px-4 py-4 text-xs font-mono text-gray-500">PC, VPS, GPU</td>
-                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">KAI Tokens</td>
-                        <td class="px-4 py-4 text-right">
-                            <a href="/guides/kaisar-guide.md" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Read Guide</a>
-                        </td>
-                    </tr>
-
-                    <tr class="table-row-hover">
+<tr class="table-row-hover">
                         <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
                             <img src="https://logo.clearbit.com/openledger.net" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
                             OpenLedger
@@ -259,9 +232,7 @@
                             <a href="/guides/openledger-guide.md" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Read Guide</a>
                         </td>
                     </tr>
-<tbody class="text-gray-300">
-
-                    <tr class="table-row-hover">
+<tr class="table-row-hover">
                         <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
                             <img src="https://logo.clearbit.com/layeredge.io" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
                             LayerEdge
@@ -273,21 +244,7 @@
                             <a href="/guides/layeredge-guide.md" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Read Guide</a>
                         </td>
                     </tr>
-
-                    <tr class="table-row-hover">
-                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
-                            <img src="https://logo.clearbit.com/kaisar.io" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
-                            Kaisar Network (KAI)
-                        </td>
-                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="DePIN on the peaq blockchain. Monetize idle GPU compute for the AI revolution via Checker Nodes.">DePIN on the peaq blockchain. Monetize idle GPU compute for the AI rev...</td>
-                        <td class="px-4 py-4 text-xs font-mono text-gray-500">PC, VPS, GPU Node</td>
-                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">$KAI Airdrop</td>
-                        <td class="px-4 py-4 text-right">
-                            <a href="/guides/kaisar-guide.md" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Read Guide</a>
-                        </td>
-                    </tr>
-
-                    <tr class="table-row-hover">
+<tr class="table-row-hover">
                         <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
                             <img src="https://logo.clearbit.com/openledger.net" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
                             OpenLedger
@@ -299,9 +256,7 @@
                             <a href="/guides/openledger-guide.md" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Read Guide</a>
                         </td>
                     </tr>
-
-
-                    <tr class="table-row-hover">
+<tr class="table-row-hover">
                         <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
                             <img src="https://logo.clearbit.com/deepnode.ai" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
                             DeepNode
@@ -313,9 +268,7 @@
                             <a href="https://cryptol.ink/4NTHlj" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join DeepNode</a>
                         </td>
                     </tr>
-
-
-                    <tr class="table-row-hover">
+<tr class="table-row-hover">
                         <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
                             <img src="https://logo.clearbit.com/getgrass.io" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
                             Grass
@@ -328,20 +281,7 @@
                             
                         </td>
                     </tr>
-                    <tr class="table-row-hover">
-                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
-                            <img src="https://logo.clearbit.com/duinocoin.com" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
-                            Duino-Coin (DUCO)
-                        </td>
-                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Eco-friendly centralized cryptocurrency mining designed specifically for Arduino, ESP8266, ESP32 and Raspberry Pi.">Eco-friendly centralized cryptocurrency mining designed specifically fo...</td>
-                        <td class="px-4 py-4 text-xs font-mono text-gray-500">ESP32, Arduino, Pi</td>
-                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">DUCO Tokens</td>
-                        <td class="px-4 py-4 text-right">
-                            <a href="/guides/duinocoin.md" class="inline-block border border-[#58a6ff] text-[#58a6ff] text-xs font-bold px-3 py-1 ml-2 hover:bg-[#58a6ff] hover:text-black transition uppercase">View Guide</a>
-                        </td>
-                    </tr>
-
-                    <tr class="table-row-hover">
+<tr class="table-row-hover">
                         <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
                             <img src="https://logo.clearbit.com/datahive.ai" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
                             DataHive AI
@@ -354,22 +294,7 @@
                             
                         </td>
                     </tr>
-
-                    <tr class="table-row-hover">
-                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
-                            <img src="https://logo.clearbit.com/yom.xyz" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
-                            YOM Network
-                        </td>
-                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Decentralized cloud gaming nodes. Provide low-latency game streaming for web3 games using your idle GPU and earn passive income.">Decentralized cloud gaming nodes. Provide low-latency game streaming for...</td>
-                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Node, Windows, Linux</td>
-                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">$YOM Tokens</td>
-                        <td class="px-4 py-4 text-right">
-                            <a href="/guides/yom-node-guide.md" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Read Guide</a>
-                            
-                        </td>
-                    </tr>
-
-                    <tr class="table-row-hover">
+<tr class="table-row-hover">
                         <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
                             <img src="https://logo.clearbit.com/gradient.network" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
                             Gradient
@@ -382,8 +307,7 @@
                             
                         </td>
                     </tr>
-
-                    <tr class="table-row-hover">
+<tr class="table-row-hover">
                         <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
                             <img src="https://logo.clearbit.com/blockmesh.xyz" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
                             BlockMesh
@@ -396,8 +320,7 @@
                             
                         </td>
                     </tr>
-
-                    <tr class="table-row-hover">
+<tr class="table-row-hover">
                         <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
                             <img src="https://logo.clearbit.com/dawninternet.com" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
                             Dawn
@@ -410,7 +333,7 @@
                             
                         </td>
                     </tr>
-                    <tr class="table-row-hover">
+<tr class="table-row-hover">
                         <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
                             <img src="https://logo.clearbit.com/aro.network" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
                             ARO Network
@@ -422,8 +345,7 @@
                             <a href="https://cryptol.ink/sMQkDz" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join ARO</a>
                         </td>
                     </tr>
-
-                    <tr class="table-row-hover">
+<tr class="table-row-hover">
                         <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
                             <img src="https://logo.clearbit.com/nodepay.ai" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
                             Nodepay
@@ -436,9 +358,225 @@
                             
                         </td>
                     </tr>
-
-                    
-                    <tr class="table-row-hover">
+<tr class="table-row-hover">
+                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
+                            <img src="https://logo.clearbit.com/oasis.ai" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
+                            Oasis AI
+                        </td>
+                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Connect your GPU/CPU or just bandwidth to the decentralized AI compute network via a simple browser extension.">Connect your GPU/CPU or just bandwidth to the decentralized AI compute n...</td>
+                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Extension, Windows, Linux</td>
+                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">OAI Tokens</td>
+                        <td class="px-4 py-4 text-right">
+                            <a href="https://cryptol.ink/5caoCN" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join Oasis AI</a>
+                            
+                        </td>
+                    </tr>
+<tr class="table-row-hover">
+                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
+                            <img src="https://logo.clearbit.com/blockgames.app" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
+                            BlockGames
+                        </td>
+                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="A cross-chain, universal player network. Play mobile games, build your player profile, and earn rewards and ecosystem airdrops.">A cross-chain, universal player network. Play mobile games, build your p...</td>
+                        <td class="px-4 py-4 text-xs font-mono text-gray-500">App, Android, Browser</td>
+                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">BLOCK / Points</td>
+                        <td class="px-4 py-4 text-right">
+                            <a href="https://cryptol.ink/udPF8u" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join BlockGames</a>
+                            
+                        </td>
+                    </tr>
+<tr class="table-row-hover">
+                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
+                            <img src="https://logo.clearbit.com/zerion.io" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
+                            Zerion Wallet
+                        </td>
+                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Smart Web3 wallet and portfolio tracker. Trade across networks, track your positions, and earn rewards and perks.">Smart Web3 wallet and portfolio tracker. Trade across networks, track yo...</td>
+                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Wallet, Android, Extension</td>
+                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Wallet Perks</td>
+                        <td class="px-4 py-4 text-right">
+                            <a href="https://cryptol.ink/rAkPlO" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Get Zerion</a>
+                            
+                        </td>
+                    </tr>
+<tr class="table-row-hover">
+                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
+                            <img src="https://logo.clearbit.com/hyra.network" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
+                            Hyra
+                        </td>
+                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Provide bandwidth and computing power. Lightweight background node earning network points.">Provide bandwidth and computing power. Lightweight background node earni...</td>
+                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Extension, Windows, Linux</td>
+                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Hyra Points</td>
+                        <td class="px-4 py-4 text-right">
+                            
+                            
+                        </td>
+                    </tr>
+<tr class="table-row-hover">
+                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
+                            <img src="https://logo.clearbit.com/ur.io" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
+                            Urnetwork
+                        </td>
+                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="A decentralized AI infrastructure network. Share your bandwidth and computing power to earn daily rewards.">A decentralized AI infrastructure network. Share your bandwidth and comp...</td>
+                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Extension, Windows, Linux</td>
+                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Points</td>
+                        <td class="px-4 py-4 text-right">
+                            <a href="https://cryptol.ink/PQFIvk" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join Urnetwork</a>
+                            
+                        </td>
+                    </tr>
+<tr class="table-row-hover">
+                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
+                            <img src="https://logo.clearbit.com/teneo.pro" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
+                            Teneo
+                        </td>
+                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Earn rewards by running a community node and sharing your unused bandwidth.">Earn rewards by running a community node and sharing your unused bandwidth.</td>
+                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Extension, Windows, Linux</td>
+                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Teneo Points</td>
+                        <td class="px-4 py-4 text-right">
+                            <a href="https://cryptol.ink/CaRPOI" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join Teneo</a>
+                            
+                        </td>
+                    </tr>
+<tr class="table-row-hover">
+                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
+                            <img src="https://logo.clearbit.com/gradient.network" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
+                            Gradient Network
+                        </td>
+                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="DePIN focused on reducing AI training costs via lightweight Sentry Nodes.">DePIN focused on reducing AI training costs via lightweight Sentry Nodes...</td>
+                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Extension, Web</td>
+                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Points / Airdrop</td>
+                        <td class="px-4 py-4 text-right">
+                            <a href="https://gradient.network/" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join Gradient</a>
+                        </td>
+                    </tr>
+<tr class="table-row-hover">
+                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
+                            <img src="https://logo.clearbit.com/addslice.com" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
+                            AddSlice
+                        </td>
+                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Earn while browsing (Non-Crypto). Turn your browsing time into passive income by viewing non-intrusive ads.">Earn while browsing (Non-Crypto). Turn your browsing time into passive in...</td>
+                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Extension, Browser</td>
+                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Fiat / Gift Cards</td>
+                        <td class="px-4 py-4 text-right">
+                            <a href="https://cryptol.ink/2Q2Rrp" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join AddSlice</a>
+                        </td>
+                    </tr>
+<tr class="table-row-hover">
+                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
+                            <img src="https://logo.clearbit.com/3dos.io" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
+                            3DOS
+                        </td>
+                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Decentralized 3D manufacturing network extension. Use code: e63f2c886b6a596c9380">Decentralized 3D manufacturing network extension. Use code: e63f2c88...</td>
+                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Extension</td>
+                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Points</td>
+                        <td class="px-4 py-4 text-right">
+                            <a href="https://cryptol.ink/y04zxh" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join 3DOS</a>
+                        </td>
+                    </tr>
+<tr class="table-row-hover">
+                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
+                            <img src="https://logo.clearbit.com/distribute.ai" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
+                            Distribute AI
+                        </td>
+                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Contribute idle compute and bandwidth to power decentralized AI models.">Contribute idle compute and bandwidth to power decentralized AI models.</td>
+                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Extension</td>
+                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Points</td>
+                        <td class="px-4 py-4 text-right">
+                            <a href="https://cryptol.ink/d8qNC3" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join Distribute AI</a>
+                        </td>
+                    </tr>
+<tr class="table-row-hover">
+                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
+                            <img src="https://logo.clearbit.com/browser.cash" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
+                            Browser Cash
+                        </td>
+                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Browser extension to earn rewards passively while surfing the web.">Browser extension to earn rewards passively while surfing the web.</td>
+                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Extension</td>
+                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Points / Crypto</td>
+                        <td class="px-4 py-4 text-right">
+                            <a href="https://cryptol.ink/XBQNSM" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Install</a>
+                        </td>
+                    </tr>
+<tr class="table-row-hover">
+                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
+                            <img src="https://logo.clearbit.com/repocket.co" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
+                            Repocket
+                        </td>
+                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Share your internet connection and earn money passively.">Share your internet connection and earn money passively.</td>
+                        <td class="px-4 py-4 text-xs font-mono text-gray-500">App, Extension</td>
+                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Fiat / PayPal</td>
+                        <td class="px-4 py-4 text-right">
+                            <a href="https://cryptol.ink/znLmCE" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join Repocket</a>
+                        </td>
+                    </tr>
+<tr class="table-row-hover">
+                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
+                            <img src="https://logo.clearbit.com/antgain.app" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
+                            AntGain
+                        </td>
+                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Bandwidth sharing node that pays you for connectivity.">Bandwidth sharing node that pays you for connectivity.</td>
+                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Extension</td>
+                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Rewards</td>
+                        <td class="px-4 py-4 text-right">
+                            <a href="https://cryptol.ink/Dcowd1" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join AntGain</a>
+                        </td>
+                    </tr>
+<tr class="table-row-hover">
+                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
+                            <img src="https://logo.clearbit.com/depined.org" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
+                            DePINed
+                        </td>
+                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="1-click Chrome extension that allows you to share idle computer power and internet bandwidth with the $DePIN SuperCloud Network.">1-click Chrome extension that allows you to share idle computer power and ...</td>
+                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Extension, PC</td>
+                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Points / Tokens</td>
+                        <td class="px-4 py-4 text-right">
+                            <a href="/guides/depined-guide.md" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Read Guide</a>
+                        </td>
+                    </tr>
+<tr class="table-row-hover">
+                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
+                            <img src="https://logo.clearbit.com/flow3.network" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
+                            Flow3 Network
+                        </td>
+                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Decentralized wireless & AI-powered monetization extension with daily activities.">Decentralized wireless & AI-powered monetization extension with daily acti...</td>
+                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Extension</td>
+                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Points</td>
+                        <td class="px-4 py-4 text-right">
+                            <a href="/guides/flow3-guide.md" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Read Guide</a>
+                        </td>
+                    </tr>
+<tr class="table-row-hover">
+                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
+                            <img src="https://logo.clearbit.com/ddai.network" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
+                            DDAI Network
+                        </td>
+                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="An AI-Powered DePIN validator node extension where you earn by validating transactions and contributing to AI services.">An AI-Powered DePIN validator node extension where you earn by validating ...</td>
+                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Extension</td>
+                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Points</td>
+                        <td class="px-4 py-4 text-right">
+                            <a href="/guides/ddai-guide.md" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Read Guide</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+        
+        <div class="mb-16 overflow-x-auto">
+            <h2 class="text-2xl font-bold uppercase tracking-tighter mb-4 text-white border-l-4 border-green-500 pl-3">2. Mobile & Bandwidth Apps</h2>
+            <div class="bg-[#111] border border-gray-800 rounded-sm">
+                <table class="w-full text-left text-sm whitespace-nowrap">
+                    <thead>
+                        <tr class="bg-[#0a0a0a]">
+                            <th class="px-4 py-4">Project</th>
+                            <th class="px-4 py-4">Description</th>
+                            <th class="px-4 py-4">Platforms</th>
+                            <th class="px-4 py-4">Yield / Reward</th>
+                            <th class="px-4 py-4 text-right">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-300">
+                        <tr class="table-row-hover">
                         <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
                             <img src="https://logo.clearbit.com/unitynodes.io" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
                             Unity Network
@@ -464,22 +602,7 @@
                             
                         </td>
                     </tr>
-
-                    <tr class="table-row-hover">
-                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
-                            <img src="https://logo.clearbit.com/koii.network" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
-                            Koii Network
-                        </td>
-                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Run a desktop node to provide compute for AI models, decentralized scraping, and more. Highly active community.">Run a desktop node to provide compute for AI models, decentralized scrap...</td>
-                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Desktop Node, Windows, Linux</td>
-                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">KOII Tokens</td>
-                        <td class="px-4 py-4 text-right">
-                            <a href="https://koii.network/" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Visit Website</a>
-                            
-                        </td>
-                    </tr>
-
-                    <tr class="table-row-hover">
+<tr class="table-row-hover">
                         <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
                             <img src="https://logo.clearbit.com/natix.network" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
                             NATIX
@@ -492,22 +615,7 @@
                             
                         </td>
                     </tr>
-
-                    <tr class="table-row-hover">
-                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
-                            <img src="https://logo.clearbit.com/oasis.ai" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
-                            Oasis AI
-                        </td>
-                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Connect your GPU/CPU or just bandwidth to the decentralized AI compute network via a simple browser extension.">Connect your GPU/CPU or just bandwidth to the decentralized AI compute n...</td>
-                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Extension, Windows, Linux</td>
-                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">OAI Tokens</td>
-                        <td class="px-4 py-4 text-right">
-                            <a href="https://cryptol.ink/5caoCN" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join Oasis AI</a>
-                            
-                        </td>
-                    </tr>
-
-                    <tr class="table-row-hover">
+<tr class="table-row-hover">
                         <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
                             <img src="https://logo.clearbit.com/acurast.com" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
                             Acurast
@@ -520,22 +628,7 @@
                             
                         </td>
                     </tr>
-
-                    <tr class="table-row-hover">
-                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
-                            <img src="https://logo.clearbit.com/blockgames.app" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
-                            BlockGames
-                        </td>
-                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="A cross-chain, universal player network. Play mobile games, build your player profile, and earn rewards and ecosystem airdrops.">A cross-chain, universal player network. Play mobile games, build your p...</td>
-                        <td class="px-4 py-4 text-xs font-mono text-gray-500">App, Android, Browser</td>
-                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">BLOCK / Points</td>
-                        <td class="px-4 py-4 text-right">
-                            <a href="https://cryptol.ink/udPF8u" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join BlockGames</a>
-                            
-                        </td>
-                    </tr>
-
-                    <tr class="table-row-hover">
+<tr class="table-row-hover">
                         <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
                             <img src="https://logo.clearbit.com/farcaster.xyz" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
                             Farcaster
@@ -548,22 +641,7 @@
                             
                         </td>
                     </tr>
-
-                    <tr class="table-row-hover">
-                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
-                            <img src="https://logo.clearbit.com/zerion.io" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
-                            Zerion Wallet
-                        </td>
-                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Smart Web3 wallet and portfolio tracker. Trade across networks, track your positions, and earn rewards and perks.">Smart Web3 wallet and portfolio tracker. Trade across networks, track yo...</td>
-                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Wallet, Android, Extension</td>
-                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Wallet Perks</td>
-                        <td class="px-4 py-4 text-right">
-                            <a href="https://cryptol.ink/rAkPlO" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Get Zerion</a>
-                            
-                        </td>
-                    </tr>
-
-                    <tr class="table-row-hover">
+<tr class="table-row-hover">
                         <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
                             <img src="https://logo.clearbit.com/375.ai" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
                             375go
@@ -576,8 +654,7 @@
                             
                         </td>
                     </tr>
-
-                    <tr class="table-row-hover">
+<tr class="table-row-hover">
                         <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
                             <img src="https://logo.clearbit.com/official.app" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
                             Billions Network
@@ -590,36 +667,7 @@
                             
                         </td>
                     </tr>
-
-                    <tr class="table-row-hover">
-                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
-                            <img src="https://logo.clearbit.com/spurprotocol.com" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
-                            Spur Protocol
-                        </td>
-                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Decentralized network incentivizing users to share idle resources. Run nodes to earn passive income.">Decentralized network incentivizing users to share idle resources. Run n...</td>
-                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Node, Windows, Linux</td>
-                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Points</td>
-                        <td class="px-4 py-4 text-right">
-                            <a href="https://cryptol.ink/6VssSf" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join Spur Protocol</a>
-                            
-                        </td>
-                    </tr>
-
-                    <tr class="table-row-hover">
-                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
-                            <img src="https://logo.clearbit.com/hyra.network" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
-                            Hyra
-                        </td>
-                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Provide bandwidth and computing power. Lightweight background node earning network points.">Provide bandwidth and computing power. Lightweight background node earni...</td>
-                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Extension, Windows, Linux</td>
-                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Hyra Points</td>
-                        <td class="px-4 py-4 text-right">
-                            
-                            
-                        </td>
-                    </tr>
-
-                    <tr class="table-row-hover">
+<tr class="table-row-hover">
                         <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
                             <img src="https://logo.clearbit.com/based.one" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
                             Based
@@ -632,171 +680,7 @@
                             
                         </td>
                     </tr>
-
-                    <tr class="table-row-hover">
-                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
-                            <img src="https://logo.clearbit.com/ur.io" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
-                            Urnetwork
-                        </td>
-                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="A decentralized AI infrastructure network. Share your bandwidth and computing power to earn daily rewards.">A decentralized AI infrastructure network. Share your bandwidth and comp...</td>
-                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Extension, Windows, Linux</td>
-                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Points</td>
-                        <td class="px-4 py-4 text-right">
-                            <a href="https://cryptol.ink/PQFIvk" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join Urnetwork</a>
-                            
-                        </td>
-                    </tr>
-
-                    <tr class="table-row-hover">
-                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
-                            <img src="https://logo.clearbit.com/teneo.pro" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
-                            Teneo
-                        </td>
-                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Earn rewards by running a community node and sharing your unused bandwidth.">Earn rewards by running a community node and sharing your unused bandwidth.</td>
-                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Extension, Windows, Linux</td>
-                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Teneo Points</td>
-                        <td class="px-4 py-4 text-right">
-                            <a href="https://cryptol.ink/CaRPOI" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join Teneo</a>
-                            
-                        </td>
-                    </tr>
-
-                
-                    <tr class="table-row-hover">
-                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
-                            <img src="https://logo.clearbit.com/gradient.network" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
-                            Gradient Network
-                        </td>
-                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="DePIN focused on reducing AI training costs via lightweight Sentry Nodes.">DePIN focused on reducing AI training costs via lightweight Sentry Nodes...</td>
-                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Extension, Web</td>
-                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Points / Airdrop</td>
-                        <td class="px-4 py-4 text-right">
-                            <a href="https://gradient.network/" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join Gradient</a>
-                        </td>
-                    </tr>
-                    
-                    <tr class="table-row-hover">
-                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
-                            <img src="https://logo.clearbit.com/kaichain.net" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
-                            KAI Network
-                        </td>
-                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="KAI sits at the intersection of GPUs, AI, and DePIN. Testnet/mainnet nodes available.">KAI sits at the intersection of GPUs, AI, and DePIN. Testnet/mainnet no...</td>
-                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Linux, Windows</td>
-                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">KAI Tokens</td>
-                        <td class="px-4 py-4 text-right">
-                            <a href="https://kai.network/" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Visit KAI</a>
-                        </td>
-                    </tr>
-
-                    <tr class="table-row-hover">
-                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
-                            <img src="https://logo.clearbit.com/addslice.com" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
-                            AddSlice
-                        </td>
-                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Earn while browsing (Non-Crypto). Turn your browsing time into passive income by viewing non-intrusive ads.">Earn while browsing (Non-Crypto). Turn your browsing time into passive in...</td>
-                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Extension, Browser</td>
-                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Fiat / Gift Cards</td>
-                        <td class="px-4 py-4 text-right">
-                            <a href="https://cryptol.ink/2Q2Rrp" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join AddSlice</a>
-                        </td>
-                    </tr>
-                    <tr class="table-row-hover">
-                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
-                            <img src="https://logo.clearbit.com/alliancegames.xyz" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
-                            Alliance Games
-                        </td>
-                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Decentralized game hosting and server infrastructure node.">Decentralized game hosting and server infrastructure node.</td>
-                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Node</td>
-                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Points</td>
-                        <td class="px-4 py-4 text-right">
-                            <a href="https://cryptol.ink/2fi4IX" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join Alliance Games</a>
-                        </td>
-                    </tr>
-                    <tr class="table-row-hover">
-                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
-                            <img src="https://logo.clearbit.com/3dos.io" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
-                            3DOS
-                        </td>
-                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Decentralized 3D manufacturing network extension. Use code: e63f2c886b6a596c9380">Decentralized 3D manufacturing network extension. Use code: e63f2c88...</td>
-                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Extension</td>
-                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Points</td>
-                        <td class="px-4 py-4 text-right">
-                            <a href="https://cryptol.ink/y04zxh" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join 3DOS</a>
-                        </td>
-                    </tr>
-                    <tr class="table-row-hover">
-                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
-                            <img src="https://logo.clearbit.com/hednet.io" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
-                            HEDNET
-                        </td>
-                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Decentralized compute network rewarding users for contributing processing power.">Decentralized compute network rewarding users for contributing processin...</td>
-                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Node</td>
-                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Points</td>
-                        <td class="px-4 py-4 text-right">
-                            <a href="https://cryptol.ink/BJKwQ6" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join HEDNET</a>
-                        </td>
-                    </tr>
-                    <tr class="table-row-hover">
-                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
-                            <img src="https://logo.clearbit.com/optimai.network" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
-                            OptimAI
-                        </td>
-                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Decentralized AI infrastructure network. Run a node to help train AI models.">Decentralized AI infrastructure network. Run a node to help train AI mod...</td>
-                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Node</td>
-                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Points</td>
-                        <td class="px-4 py-4 text-right">
-                            <a href="https://node.optimai.network/register?ref=EF025019" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join OptimAI</a>
-                        </td>
-                    </tr>
-                    <tr class="table-row-hover">
-                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
-                            <img src="https://logo.clearbit.com/distribute.ai" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
-                            Distribute AI
-                        </td>
-                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Contribute idle compute and bandwidth to power decentralized AI models.">Contribute idle compute and bandwidth to power decentralized AI models.</td>
-                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Extension</td>
-                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Points</td>
-                        <td class="px-4 py-4 text-right">
-                            <a href="https://cryptol.ink/d8qNC3" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join Distribute AI</a>
-                        </td>
-                    </tr>
-                    <tr class="table-row-hover">
-                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
-                            <img src="https://logo.clearbit.com/kaisar.io" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
-                            Kaisar Zero
-                        </td>
-                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="DePIN platform designed for generalized decentralized computing.">DePIN platform designed for generalized decentralized computing.</td>
-                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Node</td>
-                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Points</td>
-                        <td class="px-4 py-4 text-right">
-                            <a href="https://cryptol.ink/8yPPTp" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join Kaisar</a>
-                        </td>
-                    </tr>
-                    <tr class="table-row-hover">
-                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
-                            <img src="https://logo.clearbit.com/browser.cash" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
-                            Browser Cash
-                        </td>
-                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Browser extension to earn rewards passively while surfing the web.">Browser extension to earn rewards passively while surfing the web.</td>
-                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Extension</td>
-                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Points / Crypto</td>
-                        <td class="px-4 py-4 text-right">
-                            <a href="https://cryptol.ink/XBQNSM" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Install</a>
-                        </td>
-                    </tr>
-                    <tr class="table-row-hover">
-                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
-                            <img src="https://logo.clearbit.com/repocket.co" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
-                            Repocket
-                        </td>
-                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Share your internet connection and earn money passively.">Share your internet connection and earn money passively.</td>
-                        <td class="px-4 py-4 text-xs font-mono text-gray-500">App, Extension</td>
-                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Fiat / PayPal</td>
-                        <td class="px-4 py-4 text-right">
-                            <a href="https://cryptol.ink/znLmCE" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join Repocket</a>
-                        </td>
-                    </tr>
-                    <tr class="table-row-hover">
+<tr class="table-row-hover">
                         <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
                             <img src="https://logo.clearbit.com/traffmonetizer.com" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
                             Traffmonetizer
@@ -808,7 +692,7 @@
                             <a href="https://cryptol.ink/ROneeE" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join Traffmonetizer</a>
                         </td>
                     </tr>
-                    <tr class="table-row-hover">
+<tr class="table-row-hover">
                         <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
                             <img src="https://logo.clearbit.com/proxybase.org" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
                             ProxyBase
@@ -820,7 +704,7 @@
                             <a href="https://cryptol.ink/5BqwTL" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join ProxyBase</a>
                         </td>
                     </tr>
-                    <tr class="table-row-hover">
+<tr class="table-row-hover">
                         <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
                             <img src="https://logo.clearbit.com/pawns.app" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
                             Pawns.app
@@ -832,7 +716,7 @@
                             <a href="https://cryptol.ink/LJITUG" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join Pawns</a>
                         </td>
                     </tr>
-                    <tr class="table-row-hover">
+<tr class="table-row-hover">
                         <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
                             <img src="https://logo.clearbit.com/proxyrack.com" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
                             Proxyrack
@@ -844,19 +728,7 @@
                             <a href="https://cryptol.ink/sMOvAh" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join Proxyrack</a>
                         </td>
                     </tr>
-                    <tr class="table-row-hover">
-                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
-                            <img src="https://logo.clearbit.com/antgain.app" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
-                            AntGain
-                        </td>
-                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Bandwidth sharing node that pays you for connectivity.">Bandwidth sharing node that pays you for connectivity.</td>
-                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Extension</td>
-                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Rewards</td>
-                        <td class="px-4 py-4 text-right">
-                            <a href="https://cryptol.ink/Dcowd1" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join AntGain</a>
-                        </td>
-                    </tr>
-                    <tr class="table-row-hover">
+<tr class="table-row-hover">
                         <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
                             <img src="https://logo.clearbit.com/packetstream.io" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
                             PacketStream
@@ -868,7 +740,7 @@
                             <a href="https://cryptol.ink/srPNbs" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join PacketStream</a>
                         </td>
                     </tr>
-                    <tr class="table-row-hover">
+<tr class="table-row-hover">
                         <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
                             <img src="https://logo.clearbit.com/proxylite.ru" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
                             ProxyLite
@@ -880,7 +752,7 @@
                             <a href="https://cryptol.ink/Fzt01B" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join ProxyLite</a>
                         </td>
                     </tr>
-                    <tr class="table-row-hover">
+<tr class="table-row-hover">
                         <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
                             <img src="https://logo.clearbit.com/earn.fm" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
                             Earn.fm
@@ -892,67 +764,7 @@
                             <a href="https://cryptol.ink/U15niz" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join Earn.fm</a>
                         </td>
                     </tr>
-                    <tr class="table-row-hover">
-                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
-                            <img src="https://logo.clearbit.com/titannet.io" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
-                            Titan Network
-                        </td>
-                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Decentralized file hosting and bandwidth sharing node network.">Decentralized file hosting and bandwidth sharing node network.</td>
-                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Node</td>
-                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Points</td>
-                        <td class="px-4 py-4 text-right">
-                            <a href="https://cryptol.ink/guR31w" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join Titan</a>
-                        </td>
-                    </tr>
-                    <tr class="table-row-hover">
-                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
-                            <img src="https://logo.clearbit.com/depined.org" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
-                            DePINed
-                        </td>
-                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="1-click Chrome extension that allows you to share idle computer power and internet bandwidth with the $DePIN SuperCloud Network.">1-click Chrome extension that allows you to share idle computer power and ...</td>
-                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Extension, PC</td>
-                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Points / Tokens</td>
-                        <td class="px-4 py-4 text-right">
-                            <a href="/guides/depined-guide.md" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Read Guide</a>
-                        </td>
-                    </tr>
-                    <tr class="table-row-hover">
-                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
-                            <img src="https://logo.clearbit.com/flow3.network" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
-                            Flow3 Network
-                        </td>
-                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Decentralized wireless & AI-powered monetization extension with daily activities.">Decentralized wireless & AI-powered monetization extension with daily acti...</td>
-                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Extension</td>
-                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Points</td>
-                        <td class="px-4 py-4 text-right">
-                            <a href="/guides/flow3-guide.md" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Read Guide</a>
-                        </td>
-                    </tr>
-                    <tr class="table-row-hover">
-                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
-                            <img src="https://logo.clearbit.com/ddai.network" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
-                            DDAI Network
-                        </td>
-                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="An AI-Powered DePIN validator node extension where you earn by validating transactions and contributing to AI services.">An AI-Powered DePIN validator node extension where you earn by validating ...</td>
-                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Extension</td>
-                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Points</td>
-                        <td class="px-4 py-4 text-right">
-                            <a href="/guides/ddai-guide.md" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Read Guide</a>
-                        </td>
-                    </tr>
-                    <tr class="table-row-hover">
-                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
-                            <img src="https://logo.clearbit.com/mystnodes.co" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
-                            Mysterium
-                        </td>
-                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Turn your spare bandwidth into a decentralized VPN node and earn MYST tokens.">Turn your spare bandwidth into a decentralized VPN node and earn MYST to...</td>
-                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Node, Pi, Docker, PC</td>
-                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">MYST Tokens</td>
-                        <td class="px-4 py-4 text-right">
-                            <a href="https://cryptol.ink/OgjTs1" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join Mysterium</a>
-                        </td>
-                    </tr>
-                    <tr class="table-row-hover">
+<tr class="table-row-hover">
                         <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
                             <img src="https://logo.clearbit.com/earnapp.com" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
                             EarnApp
@@ -964,8 +776,191 @@
                             <a href="https://cryptol.ink/wCJn2B" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join EarnApp</a>
                         </td>
                     </tr>
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
         </div>
-
+    
         
+        <div class="mb-16 overflow-x-auto">
+            <h2 class="text-2xl font-bold uppercase tracking-tighter mb-4 text-white border-l-4 border-purple-500 pl-3">3. DePIN Nodes & Hardware</h2>
+            <div class="bg-[#111] border border-gray-800 rounded-sm">
+                <table class="w-full text-left text-sm whitespace-nowrap">
+                    <thead>
+                        <tr class="bg-[#0a0a0a]">
+                            <th class="px-4 py-4">Project</th>
+                            <th class="px-4 py-4">Description</th>
+                            <th class="px-4 py-4">Platforms</th>
+                            <th class="px-4 py-4">Yield / Reward</th>
+                            <th class="px-4 py-4 text-right">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-300">
+                        <tr class="table-row-hover">
+                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
+                            <img src="https://logo.clearbit.com/kaisar.io" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
+                            Kaisar Network
+                        </td>
+                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Decentralized AI and compute DePIN on the peaq blockchain. Earn from idle GPUs.">Decentralized AI and compute DePIN on the peaq blockchain...</td>
+                        <td class="px-4 py-4 text-xs font-mono text-gray-500">PC, VPS, GPU</td>
+                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">KAI Tokens</td>
+                        <td class="px-4 py-4 text-right">
+                            <a href="/guides/kaisar-guide.md" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Read Guide</a>
+                        </td>
+                    </tr>
+<tr class="table-row-hover">
+                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
+                            <img src="https://logo.clearbit.com/kaisar.io" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
+                            Kaisar Network (KAI)
+                        </td>
+                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="DePIN on the peaq blockchain. Monetize idle GPU compute for the AI revolution via Checker Nodes.">DePIN on the peaq blockchain. Monetize idle GPU compute for the AI rev...</td>
+                        <td class="px-4 py-4 text-xs font-mono text-gray-500">PC, VPS, GPU Node</td>
+                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">$KAI Airdrop</td>
+                        <td class="px-4 py-4 text-right">
+                            <a href="/guides/kaisar-guide.md" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Read Guide</a>
+                        </td>
+                    </tr>
+<tr class="table-row-hover">
+                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
+                            <img src="https://logo.clearbit.com/duinocoin.com" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
+                            Duino-Coin (DUCO)
+                        </td>
+                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Eco-friendly centralized cryptocurrency mining designed specifically for Arduino, ESP8266, ESP32 and Raspberry Pi.">Eco-friendly centralized cryptocurrency mining designed specifically fo...</td>
+                        <td class="px-4 py-4 text-xs font-mono text-gray-500">ESP32, Arduino, Pi</td>
+                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">DUCO Tokens</td>
+                        <td class="px-4 py-4 text-right">
+                            <a href="/guides/duinocoin.md" class="inline-block border border-[#58a6ff] text-[#58a6ff] text-xs font-bold px-3 py-1 ml-2 hover:bg-[#58a6ff] hover:text-black transition uppercase">View Guide</a>
+                        </td>
+                    </tr>
+<tr class="table-row-hover">
+                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
+                            <img src="https://logo.clearbit.com/yom.xyz" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
+                            YOM Network
+                        </td>
+                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Decentralized cloud gaming nodes. Provide low-latency game streaming for web3 games using your idle GPU and earn passive income.">Decentralized cloud gaming nodes. Provide low-latency game streaming for...</td>
+                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Node, Windows, Linux</td>
+                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">$YOM Tokens</td>
+                        <td class="px-4 py-4 text-right">
+                            <a href="/guides/yom-node-guide.md" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Read Guide</a>
+                            
+                        </td>
+                    </tr>
+<tr class="table-row-hover">
+                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
+                            <img src="https://logo.clearbit.com/koii.network" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
+                            Koii Network
+                        </td>
+                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Run a desktop node to provide compute for AI models, decentralized scraping, and more. Highly active community.">Run a desktop node to provide compute for AI models, decentralized scrap...</td>
+                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Desktop Node, Windows, Linux</td>
+                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">KOII Tokens</td>
+                        <td class="px-4 py-4 text-right">
+                            <a href="https://koii.network/" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Visit Website</a>
+                            
+                        </td>
+                    </tr>
+<tr class="table-row-hover">
+                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
+                            <img src="https://logo.clearbit.com/spurprotocol.com" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
+                            Spur Protocol
+                        </td>
+                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Decentralized network incentivizing users to share idle resources. Run nodes to earn passive income.">Decentralized network incentivizing users to share idle resources. Run n...</td>
+                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Node, Windows, Linux</td>
+                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Points</td>
+                        <td class="px-4 py-4 text-right">
+                            <a href="https://cryptol.ink/6VssSf" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join Spur Protocol</a>
+                            
+                        </td>
+                    </tr>
+<tr class="table-row-hover">
+                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
+                            <img src="https://logo.clearbit.com/kaichain.net" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
+                            KAI Network
+                        </td>
+                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="KAI sits at the intersection of GPUs, AI, and DePIN. Testnet/mainnet nodes available.">KAI sits at the intersection of GPUs, AI, and DePIN. Testnet/mainnet no...</td>
+                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Linux, Windows</td>
+                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">KAI Tokens</td>
+                        <td class="px-4 py-4 text-right">
+                            <a href="https://kai.network/" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Visit KAI</a>
+                        </td>
+                    </tr>
+<tr class="table-row-hover">
+                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
+                            <img src="https://logo.clearbit.com/alliancegames.xyz" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
+                            Alliance Games
+                        </td>
+                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Decentralized game hosting and server infrastructure node.">Decentralized game hosting and server infrastructure node.</td>
+                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Node</td>
+                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Points</td>
+                        <td class="px-4 py-4 text-right">
+                            <a href="https://cryptol.ink/2fi4IX" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join Alliance Games</a>
+                        </td>
+                    </tr>
+<tr class="table-row-hover">
+                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
+                            <img src="https://logo.clearbit.com/hednet.io" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
+                            HEDNET
+                        </td>
+                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Decentralized compute network rewarding users for contributing processing power.">Decentralized compute network rewarding users for contributing processin...</td>
+                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Node</td>
+                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Points</td>
+                        <td class="px-4 py-4 text-right">
+                            <a href="https://cryptol.ink/BJKwQ6" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join HEDNET</a>
+                        </td>
+                    </tr>
+<tr class="table-row-hover">
+                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
+                            <img src="https://logo.clearbit.com/optimai.network" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
+                            OptimAI
+                        </td>
+                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Decentralized AI infrastructure network. Run a node to help train AI models.">Decentralized AI infrastructure network. Run a node to help train AI mod...</td>
+                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Node</td>
+                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Points</td>
+                        <td class="px-4 py-4 text-right">
+                            <a href="https://node.optimai.network/register?ref=EF025019" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join OptimAI</a>
+                        </td>
+                    </tr>
+<tr class="table-row-hover">
+                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
+                            <img src="https://logo.clearbit.com/kaisar.io" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
+                            Kaisar Zero
+                        </td>
+                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="DePIN platform designed for generalized decentralized computing.">DePIN platform designed for generalized decentralized computing.</td>
+                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Node</td>
+                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Points</td>
+                        <td class="px-4 py-4 text-right">
+                            <a href="https://cryptol.ink/8yPPTp" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join Kaisar</a>
+                        </td>
+                    </tr>
+<tr class="table-row-hover">
+                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
+                            <img src="https://logo.clearbit.com/titannet.io" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
+                            Titan Network
+                        </td>
+                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Decentralized file hosting and bandwidth sharing node network.">Decentralized file hosting and bandwidth sharing node network.</td>
+                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Node</td>
+                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">Points</td>
+                        <td class="px-4 py-4 text-right">
+                            <a href="https://cryptol.ink/guR31w" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join Titan</a>
+                        </td>
+                    </tr>
+<tr class="table-row-hover">
+                        <td class="px-4 py-4 font-bold text-white flex items-center gap-3">
+                            <img src="https://logo.clearbit.com/mystnodes.co" class="w-6 h-6 rounded-sm bg-white p-0.5" onerror="this.style.display='none'">
+                            Mysterium
+                        </td>
+                        <td class="px-4 py-4 text-gray-400 whitespace-normal min-w-[250px] max-w-[400px] leading-snug" title="Turn your spare bandwidth into a decentralized VPN node and earn MYST tokens.">Turn your spare bandwidth into a decentralized VPN node and earn MYST to...</td>
+                        <td class="px-4 py-4 text-xs font-mono text-gray-500">Node, Pi, Docker, PC</td>
+                        <td class="px-4 py-4 text-[#58a6ff] text-xs font-bold">MYST Tokens</td>
+                        <td class="px-4 py-4 text-right">
+                            <a href="https://cryptol.ink/OgjTs1" target="_blank" class="inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1 ml-2 transition">Join Mysterium</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+
+    </main>
+</body>
+</html>

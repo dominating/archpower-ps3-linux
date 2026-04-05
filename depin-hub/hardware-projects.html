@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassivePin | DePIN & Airdrop Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Noto+Sans+JP:wght@300;400;700&display=swap');
+        
+        body {
+            background-color: #050505;
+            color: #e2e8f0;
+            font-family: 'Space Grotesk', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            mask-image: linear-gradient(to bottom, transparent, black, transparent);
+            -webkit-mask-image: linear-gradient(to bottom, transparent 10%, black 50%, transparent 90%);
+        }
+
+        .jp-text {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #58a6ff;
+            opacity: 0.8;
+            letter-spacing: 0.2em;
+        }
+
+        .glitch-text {
+            position: relative;
+            color: white;
+        }
+
+        .glitch-text::before, .glitch-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.8;
+        }
+
+        .glitch-text::before {
+            left: 2px;
+            text-shadow: -2px 0 #ff00c1;
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim 5s infinite linear alternate-reverse;
+        }
+
+        .glitch-text::after {
+            left: -2px;
+            text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+            animation: glitch-anim2 5s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch-anim {
+            0% { clip: rect(21px, 9999px, 8px, 0); }
+            20% { clip: rect(72px, 9999px, 92px, 0); }
+            40% { clip: rect(10px, 9999px, 43px, 0); }
+            60% { clip: rect(88px, 9999px, 12px, 0); }
+            80% { clip: rect(31px, 9999px, 66px, 0); }
+            100% { clip: rect(54px, 9999px, 23px, 0); }
+        }
+
+        @keyframes glitch-anim2 {
+            0% { clip: rect(65px, 9999px, 100px, 0); }
+            20% { clip: rect(2px, 9999px, 24px, 0); }
+            40% { clip: rect(89px, 9999px, 55px, 0); }
+            60% { clip: rect(12px, 9999px, 88px, 0); }
+            80% { clip: rect(43px, 9999px, 10px, 0); }
+            100% { clip: rect(92px, 9999px, 72px, 0); }
+        }
+
+        .table-row-hover:hover {
+            background-color: rgba(255, 255, 255, 0.03);
+        }
+        
+        table {
+            border-collapse: collapse;
+        }
+        
+        th {
+            border-bottom: 1px solid #333;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            color: #888;
+        }
+        
+        td {
+            border-bottom: 1px solid #1a1a1a;
+        }
+    </style>
+</head>
+<body class="relative min-h-screen flex flex-col items-center">
+    
+    <!-- Background Grid -->
+    <div class="fixed inset-0 w-full h-full bg-grid z-0 pointer-events-none"></div>
+
+    <!-- Navigation -->
+    <nav class="w-full max-w-7xl mx-auto px-6 py-8 relative z-10 flex justify-between items-center">
+        <div class="text-2xl font-bold tracking-tighter">PASSIVEPIN<span class="text-[#58a6ff]">.</span></div>
+        <div class="flex space-x-6 text-sm font-semibold tracking-widest uppercase">
+            <a href="https://cryptol.ink/pFRkJO" class="text-[#58a6ff] hover:text-white transition">Miceprogramming Hub ↗</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="w-full max-w-7xl mx-auto px-6 py-12 relative z-10 flex flex-col flex-grow">
+        
+        <div class="mb-12">
+            <span class="jp-text text-sm font-bold block mb-2">分散型物理インフラネットワーク</span>
+            <h1 class="text-4xl md:text-6xl font-black mb-4 uppercase tracking-tighter" data-text="HARDWARE & HOMEBREW">
+                <span class="glitch-text" data-text="DePIN DIRECTORY">DePIN DIRECTORY</span>
+            </h1>
+            <p class="text-lg text-gray-400 max-w-2xl leading-relaxed">
+                A minimalist, spreadsheet-friendly list of active DePIN nodes, extensions, and passive yield opportunities. Select, copy, and paste straight to Excel.
+            </p>
+        </div>
+
+        
+        <!-- Featured Guide (Hardcoded for Digibyte/NerdMiner) -->
+        <div class="w-full bg-[#111] border border-[#58a6ff]/30 p-6 mb-16 rounded-sm">
+            <h3 class="text-xl font-bold text-[#58a6ff] uppercase tracking-widest mb-2">Featured: ESP32-S2 Digibyte Miner (NerdMiner V2)</h3>
+            <p class="text-gray-400 text-sm mb-4">Optimized NM-TV/NerdMiner V2 firmware for the ZY ESP32-S2 USB Dongle (240MHz + Thermal Throttling @ 75°C). Configured for low-power SHA256 Digibyte (DGB) mining via solo/compatible pools.</p>
+            <div class="flex items-center gap-4">
+                <a href="/guides/nerdminer-digibyte.md" class="border border-[#58a6ff] text-[#58a6ff] text-xs font-bold px-4 py-2 hover:bg-[#58a6ff] hover:text-black transition uppercase">View Guide</a>
+                <a href="/firmware/s2/nerdminer-dgb-merged.bin" class="bg-[#58a6ff] text-black text-xs font-bold px-4 py-2 hover:bg-white transition uppercase">Download .bin</a>
+                <a href="https://cryptol.ink/HiJ7Ah" target="_blank" class="bg-[#f5a90f] text-black text-xs font-bold px-4 py-2 hover:bg-white transition uppercase">Web Flasher (Flash to 0x0)</a>
+            </div>
+        </div>
+        <!-- PS3 Homebrew (sfm_ps3 patched) -->
+        <div class="w-full bg-[#111] border border-[#58a6ff]/30 p-6 mb-16 rounded-sm">
+            <h3 class="text-xl font-bold text-[#58a6ff] uppercase tracking-widest mb-2">Homebrew: PS3 Simple File Manager (SMB2 Patched)</h3>
+            <p class="text-gray-400 text-sm mb-4">A custom fork of <a href="https://cryptol.ink/1OXxOy" class="text-white hover:underline" target="_blank">lmirel's Simple File Manager for PS3 (fm_psx)</a>. This build adds native <strong>SMB2 protocol support</strong>, allowing you to seamlessly map and browse remote Windows/NAS network drives directly via `smb0:/` alongside FAT32, NTFS, EXT, and SYS local storage.</p>
+            <div class="flex items-center gap-4">
+                <a href="/downloads/sfm_ps3_smb2_patched.pkg" class="bg-[#58a6ff] text-black text-xs font-bold px-4 py-2 hover:bg-white transition uppercase">Download .pkg</a>
+                <span class="text-xs text-gray-500 uppercase">Credits: Original project by lmirel (mirel.lazar) | SMB2 patch by Mice</span>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
