@@ -50,3 +50,7 @@
 
 ## Recent 2026-04-04 Insights
 - **DePIN Hub Auto-Scout & Maintenance:** The automated scout loop identified three new node/mining projects: Chakra Network, Depinsim, and Interlink. Wrote markdown guides, integrated them into the `depin-hub` active nodes table, and deployed live to Vercel (`passivepin.xyz`). Successfully cleaned up the one-off memory consolidation cron block from `HEARTBEAT.md` to stabilize periodic tasks.
+
+## Recent 2026-04-05 Insights
+- **PassivePin / DePIN Hub Redesign:** Separated the PS3 Homebrew and ESP32 Firmware/Hardware guides from the main `index.html` into a dedicated `hardware-projects.html` page. Reorganized the core DePIN directory on `index.html` into three clean categorized tables: Browser Extensions, Mobile & Bandwidth Apps, and DePIN Nodes & Hardware.
+- **Build Tools:** Created a Node.js script (`parse_and_rebuild.js`) to parse HTML tables, group entries, inject wrappers with colored borders, and rewrite HTML safely. Changes were successfully deployed to Vercel.
