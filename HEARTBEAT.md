@@ -15,3 +15,4 @@
 - Extract important info, updates, decisions, and resource links.
 - Update `MEMORY.md` with long-term curated memories.
 - Summarize the consolidation in the daily note.
+
