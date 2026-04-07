@@ -54,3 +54,7 @@
 ## Recent 2026-04-05 Insights
 - **PassivePin / DePIN Hub Redesign:** Separated the PS3 Homebrew and ESP32 Firmware/Hardware guides from the main `index.html` into a dedicated `hardware-projects.html` page. Reorganized the core DePIN directory on `index.html` into three clean categorized tables: Browser Extensions, Mobile & Bandwidth Apps, and DePIN Nodes & Hardware.
 - **Build Tools:** Created a Node.js script (`parse_and_rebuild.js`) to parse HTML tables, group entries, inject wrappers with colored borders, and rewrite HTML safely. Changes were successfully deployed to Vercel.
+
+## Recent 2026-04-06 Insights
+- **DePIN Hub Auto-Scout & Maintenance:** Ran the daily scout loop. Discovered and verified Solix Network and AIOZ Network, wrote markdown guides, and deployed them to Vercel (`passivepin.xyz`).
+- **Passive Income VPS Infrastructure:** Initiated a sub-agent to install, configure, and daemonize background DePIN and bandwidth-sharing nodes on the Linux VPS. Successfully installed Pawns.app and custom-built a pristine EarnApp Docker container. Other active background nodes on the VPS include Titan Network, Mysterium, Repocket, PacketShare, Peer2Profit, ProxyLite, and AntGain. Scouted Honeygain, TraffMonetizer, Earn.fm, and ByteLixir for future installation.
