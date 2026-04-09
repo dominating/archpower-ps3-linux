@@ -58,7 +58,13 @@
 ## Recent 2026-04-06 Insights
 - **DePIN Hub Auto-Scout & Maintenance:** Ran the daily scout loop. Discovered and verified Solix Network and AIOZ Network, wrote markdown guides, and deployed them to Vercel (`passivepin.xyz`).
 - **Passive Income VPS Infrastructure:** Initiated a sub-agent to install, configure, and daemonize background DePIN and bandwidth-sharing nodes on the Linux VPS. Successfully installed Pawns.app and custom-built a pristine EarnApp Docker container. Other active background nodes on the VPS include Titan Network, Mysterium, Repocket, PacketShare, Peer2Profit, ProxyLite, and AntGain. Honeygain and TraffMonetizer were successfully installed and daemonized via Docker. Earn.fm is ready if API keys are provided. ByteLixir is not compatible with headless Linux.
+
 ## Recent 2026-04-07 Insights
 - **VPS Node Management**: Handled removal requests for EarnApp, Honeygain, and Pawns.app Docker containers to maintain clean passive income operations, as their integrations were restricted by datacenter IPs. TraffMonetizer is running smoothly.
 - **PS3 Remote Play / Homebrew**: Progressed the  shared library for Chiaki-NG integration with JNI wrappers. Compiled and packaged  using a custom PSL1GHT/SDL2 toolchain on the VPS after diagnosing and patching  binary dependency failures.
-\n## Recent 2026-04-07 Insights\n- **VPS Node Management**: Handled removal requests for EarnApp, Honeygain, and Pawns.app Docker containers to maintain clean passive income operations, as their integrations were restricted by datacenter IPs. TraffMonetizer is running smoothly.\n- **PS3 Remote Play / Homebrew**: Progressed the libps3rp shared library for Chiaki-NG integration with JNI wrappers. Compiled and packaged Super_Mario_War-01.00.pkg using a custom PSL1GHT/SDL2 toolchain on the VPS after diagnosing and patching libcrypto.so.1.1 binary dependency failures.
+
+## Recent 2026-04-08 Insights
+- **DePIN Hub Giveaways**: Added a new "Daily Giveaway Scout" task to the heartbeat loop. Automated scouting and deployment of the Block ($1M) "btc.day" giveaway to the Vercel hub.
+- **DePIN Hub Auto-Scout**: Avoided duplicates by implementing a strict verification step to read `index.html` before proposing nodes. Deployed SparkChain and Rivalz Network to the Hub.
+- **PS3 Development (Cell Media Client)**: Scaffolded `ps3-cell-media`, a custom hardware-accelerated Jellyfin & YouTube client using SDL2 and PSL1GHT. Wrote the architecture and initial RSX render loops to bypass the heavy official PS3 media apps.
+- **2026-04-08 Consolidated**: Added Daily Giveaway Scout task to HEARTBEAT.md. Scaffolded ps3-cell-media (Jellyfin/YouTube client for PS3) using PSL1GHT, SDL2, and RSX hardware acceleration.
