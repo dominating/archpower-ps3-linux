@@ -23,3 +23,4 @@
 - Use `web_search` to look for new hardware, crypto, or DePIN-related giveaways (e.g., miners like Bitaxe, nodes, hardware wallets).
 - If any legitimate active giveaways are found, send a Telegram alert so they can be added to the DePIN Hub giveaways section.
 
+

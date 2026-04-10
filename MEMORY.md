@@ -68,3 +68,6 @@
 - **DePIN Hub Auto-Scout**: Avoided duplicates by implementing a strict verification step to read `index.html` before proposing nodes. Deployed SparkChain and Rivalz Network to the Hub.
 - **PS3 Development (Cell Media Client)**: Scaffolded `ps3-cell-media`, a custom hardware-accelerated Jellyfin & YouTube client using SDL2 and PSL1GHT. Wrote the architecture and initial RSX render loops to bypass the heavy official PS3 media apps.
 - **2026-04-08 Consolidated**: Added Daily Giveaway Scout task to HEARTBEAT.md. Scaffolded ps3-cell-media (Jellyfin/YouTube client for PS3) using PSL1GHT, SDL2, and RSX hardware acceleration.
+## Recent 2026-04-09 Insights
+- **PS3 Development & Homebrew (XNU Kernel Port)**: Began an ambitious project to port the Apple XNU Kernel (Mac OS X 10.5 Leopard / `xnu-1228`) to run bare-metal on the PS3 Cell Broadband Engine (`ps3-xnu-darwin`). Scaffolded `ps3_boot.c` and a custom Apple Platform Expert (`PE_ps3.c`) to mock the device tree and bridge XNU to the Sony Lv1 Hypervisor using PowerPC `sc 1` assembly (`lv1_calls.h`).
+- **DePIN Hub**: Inserted affiliate links for Gamma Bitaxe 601 into a newly created "Dedicated Hardware & ASIC Miners" section on the PassivePin homepage (`passivepin.xyz`).
