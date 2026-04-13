@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/ps3rp_test_client.dir/src/test_client.cpp.o CMakeFiles/ps3rp_test_client.dir/src/av_decoder.cpp.o -o ps3rp_test_client  -Wl,-rpath,/home/micemeat/.openclaw/workspace/libps3rp/build libps3rp.so -lavcodec -lavutil /usr/lib/x86_64-linux-gnu/libcrypto.so 

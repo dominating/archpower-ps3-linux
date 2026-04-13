@@ -1,0 +1,4 @@
+/home/micemeat/.openclaw/workspace/libps3rp/build/CMakeFiles/ps3rp.dir
+/home/micemeat/.openclaw/workspace/libps3rp/build/CMakeFiles/ps3rp_test_client.dir
+/home/micemeat/.openclaw/workspace/libps3rp/build/CMakeFiles/edit_cache.dir
+/home/micemeat/.openclaw/workspace/libps3rp/build/CMakeFiles/rebuild_cache.dir

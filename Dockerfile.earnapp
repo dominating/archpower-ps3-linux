@@ -1,0 +1,15 @@
+FROM ubuntu:22.04
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && apt-get install -y curl wget systemd ca-certificates && rm -rf /var/lib/apt/lists/*
+WORKDIR /app
+RUN wget -qO- https://brightdata.com/static/earnapp/install.sh > /app/install.sh
+# We need to hack the script so it doesn't try to use systemd or ask for prompt.
+# We will just run the downloaded binary.
+RUN chmod +x /app/install.sh
+RUN sed -i 's/read -p "Do you accept.*/REPLY=yes/' /app/install.sh
+RUN sed -i 's/read -r -p "Do you accept.*/REPLY=yes/' /app/install.sh
+# Actually, just downloading the binary:
+RUN URL="https://cdn-earnapp.b-cdn.net/static/earnapp-x64-1.617.296" && wget $URL -O /app/earnapp && chmod +x /app/earnapp
+# The binary needs to store its node id, so we'll volume map /etc/earnapp
+RUN mkdir -p /etc/earnapp
+CMD ["/app/earnapp", "run"]

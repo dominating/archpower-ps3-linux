@@ -1,57 +1,37 @@
-cmake_minimum_required(VERSION 3.10)
-project(libps3rp)
+cmake_minimum_required(VERSION 3.10.2)
 
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
+project(ps3rp-jni)
 
-find_package(OpenSSL REQUIRED)
-find_package(JNI)
+# Set the library name
+set(LIBRARY_NAME ps3rp)
 
-include_directories(include ${OPENSSL_INCLUDE_DIR})
-if(JNI_FOUND)
-    include_directories(${JNI_INCLUDE_DIRS})
-else()
-    # Stub JNI headers for CI/Verification without JDK
-    file(WRITE ${CMAKE_BINARY_DIR}/jni.h "
-        #ifndef JNI_STUB_H
-        #define JNI_STUB_H
-        #include <cstdint>
-        typedef void* JNIEnv;
-        typedef void* jobject;
-        typedef void* jstring;
-        typedef void* jbyteArray;
-        typedef int jint;
-        typedef int jsize;
-        typedef unsigned char jboolean;
-        typedef signed char jbyte;
-        #define JNI_TRUE 1
-        #define JNI_FALSE 0
-        #define JNICALL
-        #define JNIEXPORT
-        #endif
-    ")
-    include_directories(${CMAKE_BINARY_DIR})
-endif()
-
-# Shared Library
-if(JNI_FOUND)
-    set(JNI_SRC src/ps3rp_jni.cpp)
-endif()
-
-add_library(ps3rp SHARED 
-    src/ps3rp.cpp 
-    src/base64.cpp 
-    src/auth_crypto_isolated.cpp 
+# Add our source files
+add_library(${LIBRARY_NAME} SHARED
+    src/ps3rp_jni.cpp
+    src/ps3rp.cpp
+    src/av_decoder.cpp
     src/stream_crypto.cpp
-    ${JNI_SRC}
+    src/auth_crypto_isolated.cpp
+    src/base64.cpp
 )
 
-target_link_libraries(ps3rp OpenSSL::Crypto)
+# Find JNI and Android Log libraries
+find_package(JNI REQUIRED)
+find_library(log-lib log)
 
-find_package(PkgConfig REQUIRED)
-pkg_check_modules(AVCODEC REQUIRED libavcodec libavutil)
+# Include directories
+target_include_directories(${LIBRARY_NAME} PRIVATE 
+    ${JNI_INCLUDE_DIRS}
+    include
+)
 
-add_executable(ps3rp_test_client src/test_client.cpp src/av_decoder.cpp)
-target_include_directories(ps3rp_test_client PRIVATE ${AVCODEC_INCLUDE_DIRS})
-target_link_libraries(ps3rp_test_client ps3rp ${AVCODEC_LIBRARIES})
+# Link everything together
+target_link_libraries(${LIBRARY_NAME}
+    ${log-lib}
+    # Add other required system libraries here, e.g., z, m, etc.
+)
 
+# Ensure visibility
+set_target_properties(${LIBRARY_NAME} PROPERTIES
+    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/libs/${ANDROID_ABI}"
+)

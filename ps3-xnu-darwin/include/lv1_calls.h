@@ -19,7 +19,7 @@ static inline uint64_t lv1_hypercall(uint64_t op, uint64_t in1, uint64_t in2, ui
     __asm__ volatile ("sc 1"
                       : "+r"(r3), "+r"(r4), "+r"(r5), "+r"(r6), "+r"(r7), "+r"(r8), "+r"(r9)
                       : "r"(r11)
-                      : "r0", "r2", "r10", "r12", "memory", "cc");
+                      : "r0", "r10", "r12", "memory", "cc");
     return r3;
 }
 

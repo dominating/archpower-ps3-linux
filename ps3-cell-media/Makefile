@@ -11,9 +11,9 @@ CFILES		:= $(wildcard $(SRC_DIR)/*.c)
 CXXFILES	:= $(wildcard $(SRC_DIR)/*.cpp)
 OFILES		:= $(CFILES:$(SRC_DIR)/%.c=$(BUILD_DIR)/%.o) $(CXXFILES:$(SRC_DIR)/%.cpp=$(BUILD_DIR)/%.o)
 
-CFLAGS		+= -O3 -Wall -ffast-math -Iinclude $(shell sdl2-config --cflags)
+CFLAGS		+= -I$(PS3DEV)/portlibs/ppu/include -I$(PS3DEV)/ppu/include -O3 -Wall -ffast-math -Iinclude -Iinclude/cjson $(shell sdl2-config --cflags)
 CXXFLAGS	+= $(CFLAGS)
-LDFLAGS		+= $(shell sdl2-config --libs) -lcurl -lavcodec -lavutil -lavformat -lswscale -lz -lm -lnet -lio -lsysutil -lpsl1ght
+LDFLAGS		+= -L$(PS3DEV)/portlibs/ppu/lib $(shell sdl2-config --libs) -lrsx -lsysutil -lio -laudio -lz -lm -lnet -llv2 -lcurl -lcJSON -lavcodec -lavformat -lswscale -lavutil
 
 all: $(BUILD_DIR) $(TARGET).pkg
 
